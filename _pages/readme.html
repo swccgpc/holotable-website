@@ -1,0 +1,1403 @@
+---
+layout: holotable
+title:  "README"
+permalink: /readme/
+---
+
+
+<p class="pagetitle">Holotable &amp; Holodeck readme</p>
+
+<p>
+Holotable version 0.9.6/Holodeck version 0.3.9<br />
+Copyright 2004-2013 Matt Moseley
+</p>
+
+<p class="sectionheader">
+Windows installation:
+</p>
+
+<p>
+Use the installer to put Holotable in whatever directory you like.  You will not be 
+able to see card images in either Holotable or Holodeck until the image root 
+directory is set correctly in the holotable.ini initialization file, which should be 
+taken care of by the installer (on Windows).
+</p>
+
+<p>
+If you want to, create a shortcut on your desktop.  One way to do this is to right 
+click on Holotable.exe, select "Create Shortcut", and then move it to your desktop. 
+You can also select "Send to" and then "Desktop (create shortcut)".
+</p>
+
+<p>
+Install the GTK+ runtime if you don't already have it (you need at 
+least minor version 2.12).  A Windows port can be downloaded at <br />
+<br />
+<a href="{{ site.downloadables.windows.gtk2.url }}">
+{{ site.downloadables.windows.gtk2.name }}
+</a><br />
+<br />
+Install that and everything should be happy.
+</p>
+
+<p class="sectionheader">
+Linux installation:
+</p>
+
+<p>
+Before doing anything else, you need to make sure you have GTK+ 2.12, SDL, and SDL_net 
+on your system.  GTK+ can be downloaded from www.gtk.org.  SDL and SDL_net can be 
+downloaded from www.libsdl.org.  You may also be able to find RPMs or other binary 
+packages from various websites.
+</p>
+
+<p>
+Untar the Holotable *.tar.bz2 packages in a directory of your choosing.  For example, 
+you may wish to create a "holotable" directory in your home directory.  Move the 
+packages there, then untar/bzip with something like:
+</p>
+
+<p style="text-indent: 40px">
+tar xjf holotable-0.8.3_install.tar.bz2
+</p>
+
+<p>
+[Note: full Holotable packages for Linux will create a "holotable" directory in the directory 
+where the package is extracted.  Other packages (such as program updates, card image updates, etc.)
+should be extracted in the "holotable" directory itself.]
+</p>
+
+<p>
+This will extract the files needed to run Holotable and Holodeck.  If you've downloaded 
+the images, you will need to do the same thing with their *.tar.bz2 files.
+</p>
+
+<p>
+You will now need to edit the holotable.ini file to reference the correct directories 
+for your images, the background image, and the default deck directory.  You can also 
+do this from the Table menu (select "Options") in Holotable.
+</p>
+
+<p>
+Finally, you need to set the HOLOTABLE_PATH environment variable to point to the directory where 
+you installed Holotable.  As an example for those who aren't so familiar with Linux, something 
+like this ought to work when placed in your .bashrc file in your home directory (often 
+/home/username/.bashrc):<br />
+<br />
+export HOLOTABLE_PATH=/home/username/holotable<br />
+</p>
+
+<p style="margin-left: 50px; text-indent: -40px">
+<span style="font-weight: bold">Note:</span>
+ The Holotable and Holodeck binaries were built on Fedora Core 4.  They may or may 
+ not work on other Linuxes; pandemonium may ensue when trying to run them somewhere
+ else.  I've done some testing on Fedora Core 4, and everything seems to more or less 
+ work.  As a side note, if your opponent is on Windows and didn't build his deck post 
+ V10, you may not see all of the images for his cards.  This is because the CDF files 
+ were converted to reference images with all lowercase letter filenames at that time.  
+ Having your opponent rebuild the deck from scratch (or converting the deck file by 
+ hand) from a CDF that includes at least Virtual Set 10 should solve the problem.
+</p>
+<p style="margin-left: 50px; text-indent: -40px">
+<span style="font-weight: bold">Note 2:</span>
+ Holotable 0.7.5 and 0.8.0 were built on Zenwalk 3.0.  Holotable 0.8.1 and Holodeck 
+ 0.3.2 were built on Zenwalk 4.2.  As before, your mileage may vary, but please let 
+ me know if you have any troubles.
+</p>
+
+
+<p class="sectionheader">
+Decks:
+</p>
+
+<p>
+Holodeck is what you should use for building decks.  It has updated CDFs that are
+compatible with the images you can download from The Holotable website.  It also 
+removes problems with special characters that can crash Holotable.  As of version 
+0.1.1, you can edit previously-saved decks.  Several problems related to saving 
+decks are now fixed, and there is a counter for the number of cards in the deck.
+</p>
+
+<p>
+Version 0.1.2 added the ability to "zoom" images just like Holotable, and the three 
+key areas of the window can be resized through the use of panes (like the hand area 
+in Holotable).  There is also a fix for crashes caused by pressing keys when the 
+focus was in the list of cards from which to select or the deck list.  Now pressing 
+'a' in either place is analogous to pressing the "Add card" button.  When the focus 
+is in the deck list, pressing 'd' will remove one copy of the selected card, and the 
+up and down arrow keys move a card up and down (respectively) in the deck order.
+</p>
+
+<p>
+Version 0.1.3 was a bugfix release that removed a problem where Holodeck would crash 
+if you opened it and then tried to load a deck before opening a CDF file.
+</p>
+
+<p>
+Version 0.1.4 changed several things regarding key bindings.  The list of cards to 
+add to your deck may now be navigated by pressing letters and numbers; if one exists, 
+the first card that starts with the same letter or number will automatically be 
+selected.  Also, the up and down arrow keys now change the selection in either list 
+(previously they moved a card up or down in the deck list and had no effect in 
+the list of cards from which to choose).
+</p>
+
+<p>
+Version 0.1.5 fixed a bug where, if the cursor was left over the small image preview 
+as the selected card was changed, the resulting popups would never go away.  It also
+changed the order cards are added to the deck list; now, cards are prepended to the 
+list, so cards added first (usually starting cards) end up at the bottom of the list. 
+This way starting cards will be at the top of the deck when loaded in Holotable.
+</p>
+
+<p>
+Version 0.2.0 made some much-needed improvements.  The ability to filter by card set 
+was added (it had been disabled since 0.1.0 a year before), and a basic search 
+capability was added.  Also, the card type can now be set to "all" so that cards of all 
+types can be shown when doing a search, etc.  The ability to export the deck as a plain 
+.txt file listing of the cards was also added.
+</p>
+
+<p>     
+Version 0.2.1 added the ability to specify cards as "starting"; this causes them to be 
+loaded into the starting cards pile in Holotable.  Also, the average destiny of the 
+deck (without starting cards) can be calculated, and opening draws may be simulated 
+as well (also without starting cards).  Finally, you can also select destiny as a 
+search criterion.
+</p>
+
+<p>
+Version 0.3.0 improved the search capabilities by separating the lore and gametext search
+criteria and adding search of the icons text.  Also, the comparison operators =, &gt;=, &lt;=, 
+and != can be used for searching destiny, deploy, forfeit, power, ability, armor, maneuver, 
+defense value, hyperspeed, and landspeed.
+</p>
+
+<p>
+Version 0.3.1 fixed a memory leak that occurred when using the large image popup 
+feature.  Also, advanced or basic search can be selected; basic search provides much fewer 
+options, but also makes the Holodeck window smaller.  Ctrl-F activates the Search button, 
+and Ctrl-C activates the clear button.  Repeatedly pressing a letter or number key while 
+focus is in the "cards to choose from" list will advance the selection to the next card 
+that starts with that letter or number.  A "Card Type" column was added to the "cards to 
+choose from" list.
+</p>
+
+<p>     
+Version 0.3.2 added the ability to search through the "cards to choose from" list by 
+putting the focus in the list and then typing the letters in the card name you're looking 
+for.  The list will be searched as you enter the letters in the name up until no cards 
+match the name; the search string is reset to nothing when a card is added to your deck, 
+when the card selection is changed by clicking with the mouse or using the up/down arrow 
+keys, when the list loses focus, or when the Escape key is pressed.  Additionally, a 
+separate window that contains the deck list with sortable columns is available, and a card 
+summary dialog was added (open it to see the current count of cards of different types).  
+Finally, you can change the order of cards in the deck by holding Control and pressing the 
+up/down arrow keys -- this should speed reordering the deck).
+</p>
+
+<p>
+Version 0.3.3 changed the .htd deck file format to version 2, which does not store card 
+text in the deck file.  The card text is read from the CDF files, both in Holodeck and 
+Holotable.  This allows deck files to be kept up to date (with errata and error corrections) 
+just by getting updated CDF files.  Any old style deck files will be converted to use the 
+new format if they are loaded and then saved.  Note that cards that have changed name (as a 
+result of the Virtual Card Revolution, etc.) will not be able to be converted automatically.  
+These must be removed manually and have the new card name added back.  Holodeck will try to 
+indicate cards that no longer exist in the CDF and should be removed.  The basic search 
+format is now the default window configuration.  Several "generic" card types are now 
+available for the type filter -- so now you can filter by any character, rather than just 
+Rebels, etc.  The deck list is now sortable by any column (previously availabe through a 
+separate window accessible through a menu item).  If you try to change the order of any 
+card in the deck, the view will revert to the deck order view (removing any sorting).  The 
+average destiny of the non-starting cards in the deck is always shown on the main window.
+</p>
+
+<p>
+Version 0.3.4 added the ability to generate randomized decks (with the card pool selectable 
+by set).  A problem where starting cards in old deck files were not recognized was fixed.
+</p>
+
+<p>
+Version 0.3.5 fixed a problem where Holodeck would crash if cards were added to a deck while 
+the sort order on the deck was not the default.  Exporting a deck list to a text file now 
+uses the current sort order of the deck.  When sorted by set or card type, headers are 
+placed in the file indicating the set or card type, respectively, for the group of cards 
+that follow.  There is a new menu item to allow the user to export the deck list to a 
+directory and filename of their choosing.
+</p>
+
+<p>
+Version 0.3.6 fixed a problem with the deck list becoming unsorted when a card is newly 
+added to the deck.  Made image popup work more consistently when the card selection 
+changes.
+</p>
+
+<p>
+Version 0.3.7 fixed a problem where the number of starting cards was zeroed when a deck was 
+loaded from a previously-existing deck file.  Keys to increment and decrement the number of 
+copies (of the currently-selected card in the deck list) marked as starting were added ('s' 
+and 'r', respectively).  The "average destiny" menu item was changed to give general destiny 
+information; it now provides the number of non-starting cards of each destiny value (0-7 and 
+other).
+</p>
+
+<p>
+Version 0.3.8 added the ability to select multiple cards from the deck list to manipulate at 
+once.  This allows adding extra copies, changing the number of copies of each that are marked 
+starting, and deleting copies of the selected cards.
+</p>
+
+<p>
+Version 0.3.9 fixed a problem with crashes when adding a new card to a deck when the deck 
+list was sorted by name.
+</p>
+
+<p class="sectionheader">
+Keyboard and mouse commands:
+</p>
+
+<p>
+Click on a card and drag to move it.  To move a whole stack 
+(all cards that overlap with the one you click on, plus the 
+ones that overlap with those, etc.), press 
+Control, then click and drag (you can release Control at 
+any time during the drag).  You can select in Table->Options 
+whether you want single cards and stacks to move as you drag 
+or not.
+</p>
+
+<p>
+<b>Note: As of Holotable 0.7.4, key bindings are configurable.  These list the defaults.
+    You may generate/overwrite a default key bindings file in the Options dialog
+    under the Initialization tab.</b>
+</p>
+
+<p>
+Flip Card: f or right mouse button (when context menus not being used)<br />
+Flip Stack: Control-f or Control-right mouse button (when context menus not being used)<br />
+Next card in stack: n<br />
+Previous card in stack: p<br />
+Straighten stack: c<br />
+Shuffle stack: Shift-s (S)<br />
+Tally cards in stack: t<br />
+Horizontal Fan: h<br />
+Vertical Fan: g<br />
+Make flip state consistent: y
+</p>
+
+<p>
+Activate Force: a<br />
+Used Force: u<br />
+Draw from Force Pile: d<br />
+Draw from bottom of Force Pile: ?<br />
+Draw from Reserve Deck: w<br />
+Draw from bottom of Reserve Deck: /<br />
+Recirculate Used Pile: Shift-e (E)<br />
+Lose Force from Reserve Deck: l (lowercase L)<br />
+Retrieve from Lost Pile: x<br />
+Search Reserve Deck: 1 (subject to opponent's approval, if connected)<br />
+Search starting cards: 2 (subject to opponent's approval, if connected)<br />
+Search Force Pile: 3 (subject to opponent's approval, if connected)<br />
+Search Used Pile: 4 (subject to opponent's approval, if connected)<br />
+Search Lost Pile: 5 (subject to opponent's approval, if connected)<br />
+Peek at top X cards: 6<br />
+Swap card from hand with one from Lost Pile: 7<br />
+Draw destiny: b<br />
+Move top card of Reserve Deck to Used Pile (facedown): B<br />
+Move card to bottom of Used Pile (facedown): .<br />
+Move card to top of Used Pile (facedown): &gt;<br />
+Move card to bottom of starting cards pile: ,<br />
+Verify pile (also hand): V
+</p>
+
+<p>
+Add card to group: left click on card, then hold Shift and left click on group<br />
+Delete card from group: 9<br />
+Delete all cards from group: 8<br />
+Reposition group: 0
+</p>
+
+<p>
+Rotate Card Right: r<br />
+Rotate Stack Right: Control-r<br />
+Rotate Card Left: Shift-r (R)<br />
+Rotate Stack Left: Control-Shift-r (Control-R)<br />
+Rotate Card 180 degrees: ]<br />
+Rotate Stack 180 degrees: Control-]<br />
+Rotate large image 180 degrees: [
+</p>
+
+<p>
+'Use' card: q<br />
+'Deploy' card: '<br />
+'Target' card: m<br />
+Force drain: -<br />
+Lose Force to card: =<br />
+Initiate battle at location: \<br />
+Toggle hand visibility: v<br />
+Swap sides (single player only): Q<br />
+Toggle popup type: `
+</p>
+
+<p>
+NOTE: If you need to look through a deck, going backwards 
+using 'p' will be faster than 'n'.
+</p>
+
+
+<p class="sectionheader">
+Menu selections:
+</p>
+
+<p>
+File->Load deck... - loads a deck into your hand<br />
+File->Load game... - loads a saved game.  For two-player games, your 
+                opponent must enter the correct password for the 
+                load to succeed.<br />
+File->Save game... - saves card information to a file, automatically appending 
+                ".htg" if there is no file extension specified.  
+                Table size and pile positions are saved as well.  
+                There must be at least one card loaded in order 
+                to save a game.<br />
+File->Check for updates - Checks the Internet to determine if the 
+                latest version of Holotable has been 
+                installed.  Also checks for CDF and image file  
+                updates and gives the user the option to 
+                automatically download and install them.<br />
+File->Quit - exits Holotable<br />
+<br />
+Table->Undo - undoes the last card movement.<br />
+Table->Redo - redoes the last movement that was undone.<br />
+Table->Clear local - removes all local cards from your hand, the 
+           table, and the opponent's hand.<br />
+Table->Clear all - removes all cards from your hand, the table, 
+         and the opponent's hand (use this wisely, as
+         your opponent may not play with you again if
+         you do it when you're losing!).<br />
+Table->Options... - set up various Holotable options (including 
+       image root directory and default deck directory - 
+       the image root directory must be set correctly, or 
+       you won't be able to see card images).<br />
+Table->Command Window... - opens a window where you can use buttons to 
+                 accomplish all pile movement actions and 
+                 searches as well as swap sides<br />
+Table->Detach chat/log window - removes the chat/log window from the area 
+                      next to the hand and puts it in a 
+                      separate window<br />
+Table->Detach hand window - removes the hand window from the area next 
+                  to the chat/log and puts it in a separate 
+                  window<br />
+Table->Hide phase/turn and status bars - hides the bottom two bars in 
+                               order to provide more table 
+                               visibility<br />
+Table->Choose side - randomly chooses Light or Dark Side and indicates this 
+           by a chat message to your opponent
+<br />
+Server->Connect - connect to a server to play a game.  Connects 
+        to the IP/hostname and port set in the 
+        Options dialog.<br />
+Server->Accept - set up your machine as a server for a peer to 
+       peer connection from another player.  Listens 
+       on the port specified in the Options dialog.
+       (You may not be able to accept connections 
+       depending on your network configuration).<br />
+Server->Disconnect - disconnect from a server you've connected to.<br />
+Server->Cancel Accept - stop listening for a peer to peer 
+              connection.<br />
+Server->End Game - if you are playing via the central server, you 
+         can end your game and return to the lobby 
+         without disconnecting and reconnecting.  Your 
+         opponent will be returned there as well.  When 
+         observing a game, this takes only you back to 
+         the central server lobby.<br />
+<br />
+Help->Key reference... - Open a keyboard reference dialog, which will 
+                      stay above other windows.<br />
+Help->About - list some information about Holotable.
+</p>
+
+
+<p class="sectionheader">
+Playing a game:
+</p>
+
+<p>
+Once you've found someone to play against, you need to get connected.
+</p>
+
+<p>
+Peer to peer:<br />
+One player chooses Server->Accept, and the other player sets the first 
+player's IP address and port number in their options.  The second 
+player then chooses Server->Connect.  Note that, depending on your 
+network configuration, you may not be able to accept incoming 
+connections. Firewall software must be configured to allow incoming 
+connections to Holotable ("act as a server"); routers generally need 
+to be configured to allow incoming traffic on the port number you 
+are trying to use, and they may need to be set to do port forwarding.
+</p>
+
+<p>
+Central server (current IP is www.holotable.com):<br />
+Both players put the central server's IP address and port number 5320 
+in their options.  Both players then choose Server->Connect.  This 
+will connect to the central server, which requires authentication.  
+You must enter the password associated with your account on the Holotable
+website forums (your username in Table->Options must also match the 
+username from the forum account).  After you've entered the correct 
+password, you will see the server lobby.  You can chat with other users 
+and request games here.  If you request a game from yourself, you will 
+automatically be rejected.  Any user you request a game with will see 
+a dialog box that allows them to accept or reject the game.  If they 
+accept, you will see a message in the status bar area reflecting 
+that, and the server lobby dialog will disappear.  You can then load 
+your decks and start playing.
+</p>
+
+<p>
+Once there is a connection, both players should load their decks (it is
+EXTREMELY important that this be done AFTER the connection is made, and
+that no cards were on either player's table beforehand).  Wait for one 
+person's deck to load before loading the other deck.  The status bar on 
+the right should report details about the connection, including how many 
+remote cards have been loaded.  Once decks are loaded, go ahead and play!
+</p>
+
+<p>
+Your opponent's cards will show up rotated 180 degrees from their view, 
+just like if you were sitting across the table from them.  Their cards 
+will also be on the other side of the table.  So when you play your 
+cards on the "bottom" of the table, they show up to your opponent at 
+the top.  It is important that both of you have the same dimensions 
+set for the playing surface size.  Otherwise the one with the smaller 
+dimension might end up with cards all stacked on each other that 
+shouldn't be.  The default option to auto-adjust the table size to the 
+largest dimensions will take care of this for you if both players have 
+it turned on when a game is started.
+</p>
+
+
+<p class="sectionheader">
+Central server lobby operation:
+</p>
+
+<p>
+The central server lobby provides a place for players to meet and chat 
+as well as find opponents for games.  When you log on to the server, 
+a window will appear that shows you the username, status, and location 
+of everyone who is currently online.  The number of people currently 
+playing a game is shown; if you place your mouse cursor over that text, 
+a tooltip will appear that shows the names of these players.
+</p>
+
+<p>
+In the middle of the window is a combo box with various status choices.  
+You may use these options to indicate what you are doing in the lobby.  
+If you choose "Away", anyone who requests a game from you will 
+automatically be rejected, and you will not see the request.
+</p>
+
+<p>
+To request a game with someone, select their username in the list and 
+click the "Request game" button.  That user will see a dialog box pop 
+up which will give them the option of accepting or rejecting your 
+request.  If your request is accepted, the server lobby window will 
+disappear and you will be placed back in the main Holotable window, 
+where you can load decks and start your game.  If the request is 
+rejected, a message indicating that will appear in your chat/log 
+window on the main Holotable screen.  Note that requests are also 
+automatically rejected if the other user has their own game request 
+pending, someone else has already requested a game from them and they 
+have yet to respond, or the user has configured Holotable to ignore you.
+</p>
+
+<p>
+The "Observation" button opens a dialog containing a list of the current 
+games in progress.  You may select one of the games in the list and 
+click the button to request observation of that game.  The players will 
+see your request and have the choice to accept or reject it.  If either 
+player rejects your request, you will be notified and you will stay in 
+the lobby.  If both players accept it, the lobby dialog will go away and 
+the game will load for you.  Each player's name will appear by their 
+Reserve Deck for a short period.  You will be able to chat with the 
+players and any other observers, but you cannot manipulate the cards or 
+see anyone's hand.  Either player may kick you out at any time, and you 
+will return to the lobby.  If you are done watching the game, you can 
+select "End game" from the Server menu to go back to the lobby.
+</p>
+
+<p>
+In order to provide a way to avoid harassment of various sorts that was 
+previously possible, you may set up a list of users to ignore while on 
+the central server.  You will still see the user in the user list, but 
+you will not see any of their chat messages sent to the lobby or any 
+of their game requests (which will automatically be rejected).  You 
+may set up your list by clicking the 'Ignore list' button while 
+logged onto the central server.  If a user is selected in the user 
+list area, the entry field will be prepopulated with that name when the 
+dialog opens.  You may choose to ignore a user permanently, in which 
+case the user will always be in your ignore list until you delete them.  
+If you ignore a user without choosing the permanent option, the user 
+will only be ignored until you close Holotable.
+</p>
+
+<p>
+You may whisper to a user by selecting the checkbox and choosing a user 
+in the combo box.  When you whisper, only you and the other user will 
+see the message (it will be indicated by a "[whispered to &lt;user&gt;]" tag 
+prepended to the message).
+</p>
+
+
+<p class="sectionheader">
+Quick end turn indicator:
+</p>
+
+<p>
+In Holotable 0.8.3 a new feature was introduced to make indicating the end 
+of turns easier.  The area between the "Ready for phase change" button and 
+the "Pause game" button initially has "My turn" in it.  When a game is 
+started, the user who clicks in this area first will have the area turn 
+green with "End turn" text in it.  The other user will see the area turn 
+red with "Opponent's turn" in it.  When the first user clicks in the area at 
+the end of their turn, the appearances will switch.  This is a simple way to 
+indicate the end of your turn without having to type something in the chat 
+area repetitively or use the specific phase change buttons (which are 
+cumbersome for some uses).
+</p>
+
+
+<p class="sectionheader">
+Setting quick chat text choices:
+</p>
+
+<p>
+The quick chat text combo box contents may be customized by creating a file 
+called 'quicktext.dat' in your Holotable installation directory.  Each line 
+in the file will appear in the combo box as a quick chat text option.  Once 
+Holotable has been restarted, the quick chat text combo box will show your 
+customized choices.
+</p>
+
+
+<p class="sectionheader">
+Setting default pile positions:
+</p>
+
+<p>
+The holotable.ini file is written with the positions of the different 
+piles each time the options are saved.  If you upgraded to Holotable 
+0.4.1, your holotable.ini can be updated with the default settings by 
+opening the options dialog and choosing "Apply" or "OK".  You can then 
+open holotable.ini and edit the default positions for the piles.
+</p>
+
+<p>
+For each pile, there are X and Y offsets.  The first value is the X 
+offset, which determines how far from either edge of the playing 
+surface the particular pile is placed.  The second value is the 
+Y offset, which is always from the bottom of the playing surface.
+Some players are used to having their piles on their left, which is 
+opposite of the default position.  To support anchoring the piles to the 
+left side of the playing surface, you add "left" after the Y position
+for each pile that you want anchored on the left.  Otherwise, each 
+pile will be anchored to the right.
+</p>
+
+<p>
+To aid in editing your holotable.ini for the particular placement you 
+want, the size of the three vertical piles is 66x91 pixels.  The Used 
+Pile, which is horizontal, is 91x66 pixels.
+</p>
+
+<p class="sectionheader">
+Changing chat text colors:
+</p>
+
+<p>
+In order to make it easier to see which messages in the chat/log area 
+are from what source, you can change the color used for each type of 
+message.  Informational messages are shown in the color specified in 
+the holotable.rc file.  Chat messages from you and your opponent may 
+be shown in different colors.  The holotable.ini file keeps this 
+information, and Holotable will write the default values (blue for 
+you and red for your opponent) to the file each time the options are 
+saved if none were in the file when Holotable started.
+</p>
+
+<p>
+Colors may be specified by name (only the basics are supported) or 
+in RGB format.  For RGB format, the values should be separated by 
+spaces and be in the range 0 to 65535.
+</p>
+
+<p>
+Example (these are the lines you'd add to/modify in your holotable.ini):
+</p>
+
+<p>
+Your text: 3400 78 50000<br />
+Opponent's text: orange
+</p>
+
+<p class="sectionheader">
+Card border feature:
+</p>
+
+<p>
+If you want your cards to have different borders based on card type, 
+edit your "htborders.ini" file.  The format is
+</p>
+
+<p style="text-align: center">
+&lt;card type&gt;: &lt;red value&gt; &lt;green value&gt; &lt;blue value&gt;
+
+                  AND
+
+&lt;card set&gt;: &lt;red value&gt; &lt;green value&gt; &lt;blue value&gt;
+</p>
+
+<p>
+(without the &lt; and &gt;) The colon is IMPORTANT!
+</p>
+
+<p>
+Valid card type values are those that are used in your deck files.
+For example, if you wanted all interrupts to have a certain color, 
+you'd have this line in your htborders.ini file:
+</p>
+
+<p style="text-align: center">
+Interrupt: &lt;red&gt; &lt;green&gt; &lt;blue&gt;
+</p>
+
+<p>
+Valid set values are those used in your deck files.  You can also 
+use subsets of these.  So you could make all your virtual cards 
+have a certain color with
+</p>
+
+<p style="text-align: center">
+Virtual: &lt;red&gt; &lt;green&gt; &lt;blue&gt;
+</p>
+
+<p>
+There are two special keywords: OTHERS and NONE.  Using
+</p>
+
+<p style="text-align: center">
+OTHERS: &lt;red&gt; &lt;green&gt; &lt;blue&gt;
+</p>
+
+<p>
+will result in each card that doesn't match the other card types 
+you specified colors for to have this default border color.  You can 
+also use NONE like this:
+</p>
+
+<p style="text-align: center">
+&lt;card type&gt;: NONE
+</p>
+
+<p>
+This will result in the specified card type having no border drawn 
+for it.  In this case your cards will show up just like the images 
+you have (i.e., with the black border from the card image).  You can 
+combine OTHERS and NONE , but the effect is the same as just not 
+doing so (no borders will be drawn for card types you didn't specify).
+</p>
+
+<p>
+Valid color values are 0-255.  You can find charts online that tell 
+you what color combinations result in what colors, or you can use 
+most imaging programs to figure it out.
+</p>
+
+<p>&nbsp;
+</p>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.9.6:
+</p>
+
+<ul style="margin-right: 10px">
+<li>changed observation requests to be non-modal in order to avoid lockup problems</li>
+<li>added ability to exchange hand card(s) with one card from Lost Pile</li>
+<li>fixed problem with cards being rotated incorrectly for observers on initial load</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.9.5:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added some auto-reject capabilities available when responding to observation requests</li>
+<li>fixed a bug related to pile positioning</li>
+<li>restored local pile positions after stopping observation of a game</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.9.4:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed some bugs that could cause crashes related to loading then clearing decks, then loading other decks</li>
+<li>added observation capability (when using the central server)</li>
+<li>corrected some bad messages about where cards were placed when moved out of opponent's hand onto table</li>
+<li>allow user who purposefully disconnects/ends the game to be able to save the game (instead of 
+presenting the save dialog and then having the cards cleared off the table immediately)</li>
+<li>user who is not loading a saved game now receives the same chat history text from the saved game that 
+the loader does</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.9.3:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed a bug where cards could "jump" around the table when certain command keys were pressed multiple times</li>
+<li>fixed a bug that could result in crashes when a card group was deleted</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.9.2:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added a highlight function to the 'target' card command, so the opponent can 
+find the card more easily</li>
+<li>added a brief popup containing the stack count for when the 'tally' command 
+is used; this is to make this command usable for people who have the 
+status bar hidden (where the stack count is normally displayed)</li>
+<li>fixed a problem where opponent's manual card movement would not be listed
+in the chat area if it was done immediately after movement with command 
+keys/buttons</li>
+<li>fixed a problem that lead to a crash when switching table sides (on Linux)</li>
+<li>added ability to select multiple cards to take into hand when searching a pile</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.9.1:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added the , key to put a card underneath the starting cards pile
+using the Control key with the fan command will, with successive presses, 
+cycle through the three fan spacings</li>
+<li>fixed a problem where clicking on the table after opening a card context menu 
+(i.e., to close the context menu) would cause cards to "jump" around the table</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.9.0:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed a bug related to use of some card context menu items and cards moving around 
+without having been clicked on</li>
+<li>added a graphic to show which pile a card was moved into</li>
+<li>made pile peek function default to suppressing shuffle afterwards</li>
+<li>fixed problem where the large image/tooltip text popup for a card would disappear 
+each time your opponent moved a card, etc.</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.8.9:
+</p>
+
+<ul style="margin-right: 10px">
+<li>GTK+ 2.12 is now required</li>
+<li>changed messages to display the card name when a single card is moved from 
+hand to table faceup</li>
+<li>added destiny number(s) to pile search display &amp; verification dialog</li>
+<li>pile search display now shows card text in a tooltip when the cursor moves over each row
+(also for verify dialog)</li>
+<li>changed tooltip mechanism for cards on table/in hand; it should work the same as before, 
+or maybe slightly better.  upgrading to GTK+ 2.12 broke the previous method of using 
+tooltips.</li>
+<li>clear "disable command keys" when the command window is closed/hidden</li>
+<li>removed the suppress shuffle checkbox from the verification dialog</li>
+<li>added ability to view X number of cards from top of either Reserve Deck; when viewing 
+your own cards, you can select one to draw into hand and optionally suppress shuffling 
+of the Reserve Deck afterwards</li>
+<li>store phase/turn/status bar hidden status in initialization file, so it will persist</li>
+<li>pile placement is now configurable in the options dialog; it has always been configurable 
+through the holotable.ini file itself, but now it is easier to set</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.8.8:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed card name referenced by "lose Force to" command when using the back 
+side of a two-sided card</li>
+<li>added option to hide status &amp; progress bar and phase/turn/pause area</li>
+<li>added option to allow hand area to be detached like chat/log window</li>
+<li>added option to pile searches to suppress the shuffle that follows</li>
+<li>added option to force table size auto-negotiation to go to smallest size; 
+auto-adjust must be done and the user only has an option between large &amp; small</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.8.7:
+</p>
+
+<ul style="margin-right: 10px">
+<li>automatic deck converter to compensate for virtual block changes to the 
+CDFs and image files</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.8.6:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed numerous potential jumping card problems that could occur</li>
+<li>fixed crash associated with pile search &amp; verify dialogs</li>
+<li>fixed save game error that would cause a crash on loading</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.8.5:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added automatic image file updating capability (optional)</li>
+<li>fixed bug where cards could move with cursor when not being dragged
+(particularly with GTK+ 2.12 and up)</li>
+<li>made pile search dialog show cards in pile order (can be sorted in 
+alphabetical order by clicking column header)</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.8.4:
+</p>
+
+<ul style="margin-right: 10px">
+<li>supports new deck file format and reads card text from CDFs</li>
+<li>added automatic CDF version check and download/install (optional)</li>
+<li>added automatic Holotable version check and download/install (optional)</li>
+<li>changed key bindings dialog to be resizable and have scrollbars if needed</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.8.3:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added draw from bottom of Reserve Deck capability</li>
+<li>added draw from bottom of Force Pile capability</li>
+<li>added "lose Force to &lt;card&gt;" capability</li>
+<li>added "initiate battle at &lt;location&gt;" capability</li>
+<li>added "deploy &lt;card&gt;" capability</li>
+<li>added move card to top of Used Pile capability</li>
+<li>added ignore user for central server lobby (messages from listed users are not shown, game requests are automatically rejected)</li>
+<li>added whisper to user for central server lobby</li>
+<li>quick message list is user-configurable by text file</li>
+<li>central server dialog has two panes so user can adjust size of user list and chat text area</li>
+<li>changed "Pacific Rim" location to "Australia/New Zealand"</li>
+<li>"coin flip" menu selection to choose which side to be</li>
+<li>easier indication of whose turn it is</li>
+<li>lowered network timeout warning to 1 minute from 5</li>
+<li>central server user status support (having away status automatically rejects all game requests)</li>
+<li>verify choice for all piles and hand (shows opponent list of cards in the selected area)</li>
+<li>added "lose Force to card" and "initiate battle" to right click context menu</li>
+<li>added enable/disable for card grouping feature</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.8.2:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed a bug where the search function would no longer work if the game was 
+interuppted while a search request was pending; it gets reset when a 
+disconnection occurs or when the user goes back to the lobby</li>
+<li>added messages to tell both users when a card gets added to or deleted 
+from a group</li>
+<li>cards are now automatically removed from their group when they are snapped 
+into a pile; this will prevent some unexpected results</li>
+<li>added option to automatically check for latest program version and compare 
+to user's version</li>
+<li>added automatic message to notify players when an objective is flipped 
+while on the table</li>
+<li>added support for PNG images; search order is PNG -> GIF -> JPG</li>
+</ul>
+
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.8.1:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed next/previous so they work multiple times in a stack without 
+having to move the mouse; also, image popups work as the stack is traversed</li>
+<li>default save game filename is set based on username (plus opponent's name if 
+playing against someone), date, and time</li>
+<li>saved games retain up to 100 lines' worth of text from the chat/log window
+(previously only saved up to 20 lines)</li>
+<li>added a "Cancel" button to search request dialog that is the default; it does 
+nothing, and will prevent accidental responses to search requests when the 
+user is in the middle of typing at the time the dialog appears</li>
+<li>added key to toggle popup type (large image/card text tooltip) on the fly so 
+text can be compared against the image (does not change the settings in the 
+options file, so your default will be preserved when using this key)</li>
+<li>added support for Force draining, with a dialog box for entering the Force 
+drain amount for the location (automatically populated with the basic 
+amount) -- can be access through a key binding or the card context menu</li>
+<li>fixed a bug where card movement (such as to/from a pile) could be reported 
+incorrectly</li>
+<li>added capability to stop the central server dialog from popping to the top 
+whenever a chat message is received</li>
+<li>added capability to disable key bindings for actions that can be done through 
+the command window buttons</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.8.0:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added country selection for display in central server</li>
+<li>added detachable chat/log window</li>
+<li>added more commands to context menu (target, use, tally)</li>
+<li>added keepalive message to prevent networks from automatically closing 
+idle connections and to warn user when connection may be dead</li>
+<li>fixed bug where key bindings other than the defaults for searching 
+piles would not work</li>
+<li>added support for changing phases (coordinated between players)</li>
+<li>added support for pausing the game</li>
+<li>fixed bug where fanning a stack could allow cards to move outside the 
+table area</li>
+<li>added hashing of password when sending to central server</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.7.5:
+</p>
+
+<ul style="margin-right: 10px">
+<li>drawing destiny shows the card name drawn when advanced reporting is on</li>
+<li>movement of cards in Force/Used Pile to/from Lost Pile is reported</li>
+<li>username is limited to 25 characters instead of 20 (fixes a bug in reading holotable.ini)</li>
+<li>added key binding for moving a card to bottom of Used Pile (from table or 
+hand)</li>
+<li>font for pile counts is configurable through holotable.rc -- this makes it 
+possible for users to control the width of the Holotable window, which could 
+be forced to a large value when the default font is large (this occurs on Linux 
+frequently)</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.7.4:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed bug where several stack functions (fanning, next, etc.) would not 
+work in the hand</li>
+<li>added user-definable key bindings (through the use of keybindings.ini).
+the key reference dialog updates based on the current settings.
+defaults can be restored through a button in the options dialog.</li>
+<li>fixed bug where cards snapped to incorrect place for piles in saved games
+and when the piles have been moved by auto-adjusting or changing
+the table size</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.7.3:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed bug where moving a pile broke the swap sides feature</li>
+<li>fixed bug where the view could be swapped with the "Swap sides" button
+on the command window when connected to an opponent</li>
+<li>added prevention of using 'next', 'previous', and both fan types when
+the cursor is over a card in a pile; the first two things prevent 
+surreptitious cheating, and the last prevents accidentally getting
+things all messed up by fanning a stack that's in a pile</li>
+<li>added the pile being searched to the title of the pile search dialog</li>
+<li>added optional extra messages in the chat log which show you when the 
+opponent moves cards and flips them.  these messages tell you which 
+piles cards were moved to or from, what piles cards were flipped on,
+etc.</li>
+<li>added ability to group and ungroup cards (this is sort of 
+preliminary, but it's good enough to use)</li>
+<li>fixed bug where loading a single user game did not clear the table
+before the game was loaded</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.7.2:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed bug introduced in 0.7.1 where undoing regular card movement, fanning, or
+straightening often resulted in cards being flipped incorrectly</li>
+<li>added ability to specify the gap between cards when fanned (small, medium, 
+or large)</li>
+<li>added ability to "swap sides" when testing decks (i.e., not connected) to
+make playing against yourself easier</li>
+<li>added a quick command bar to supplement key commands for dealing with pile
+movement, pile searches, and swapping sides</li>
+<li>added capability to change focus by clicking on an empty area on the table or 
+in the hand area, which allows key commands to be used again after, for 
+example, having typed something in the chat text field</li>
+<li>added ability to target a card by pressing the 'm' key (similar to 'using' a card)</li>
+<li>added ability to save and load games when in single player mode; single player
+saved games will not load when connected to someone (and vice versa)</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.7.1:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added option (in Options dialog) to load cards to hand instead of Reserve
+deck (some users said they liked the old way)</li>
+<li>added 'B' key to move cards from Reserve Deck to Used Pile and ensure
+they're facedown. this is mainly to ease the destiny drawing process.</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.7.0:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added ability to rotate popup image by 180 degrees (to ease reading of 
+opposite side of locations)</li>
+<li>made undo of drawing a card from a pile with a pile search work 
+in all cases</li>
+<li>made cards load to Reserve Deck instead of the hand (since cards can 
+be specified to load to the starting cards pile now)</li>
+<li>made all card searches that succeed take the card into hand</li>
+<li>made piles that were searched be automatically shuffled afterwards, even 
+when the search was canceled</li>
+<li>saved games now save the last 20 lines of text in the chat window for 
+the person who saves the game; this will provide some context for 
+that person when the game is loaded again</li>
+<li>added check for empty pile when a search request is made; if there are 
+no cards, the search is not requested from the opponent</li>
+<li>made card search dialog and the related messages show the title from both 
+sides of the card when it is two-sided</li>
+<li>added error reporting for when an uninterpretable message is 
+received (to help in debugging)</li>
+<li>added undo capabilities to movement done with context menu and for straightening
+and fanning of stacks</li>
+<li>added missing messages for shuffling of starting piles</li>
+<li>prevented sending of undo/redo messages to the opponent when the movement 
+is in your hand area</li>
+<li>improved undo/redo functionality for pulling a card from a pile after a search
+(a specific message about undoing/redoing the search is shown, and the card's 
+original flip state is restored when undoing)</li>
+<li>added undo/redo for rotations and flipping</li>
+<li>added "drawing" destiny and reporting of destiny drawn with 'b' key</li>
+<li>fixed problem where large image popup could remain visible when the cursor
+is not over a card</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.6.4:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed a bug that sometimes caused a crash when using the 'q' key to 
+use a card</li>
+<li>fixed a problem with selecting a user in the central server dialog</li>
+<li>added ability to hide the card searched for in a pile from the 
+opponent; the card is put into your hand in this case, and the 
+opponent sees a message that the card was hidden from them</li>
+<li>fixed a bug that sometimes caused a crash when drawing cards from 
+the Force Pile or Reserve Deck</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.6.3:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added authentication capability for using the central server</li>
+<li>fixed bug related to server chat messages</li>
+</ul>
+
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.6.2:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed bug where undoing Force retrieval moved the cards to the Reserve
+deck instead of the Lost Pile</li>
+<li>fixed bug where undoing and then redoing a draw of cards into hand 
+(from Force Pile or Reserve Deck) caused the opponent to see the 
+cards still on the table and receive a warning message</li>
+<li>made error reporting when a deck fails to load work better for the 
+opponent</li>
+<li>added specific reporting of shuffling of the Force Pile, Reserve Deck, 
+Used Pile, and Lost Pile.  other shuffles just report that a 
+stack was shuffled (as before, except you get a message when you 
+shuffle a stack, instead of just your opponent seeing it)</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.6.1:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed bug where the opponent's Holotable crashed when the user 
+pressed 'q' (to 'use' a card) over a face-down card on the table</li>
+<li>changed options so that they can be updated for the current session 
+even when the options file cannot be opened for saving them</li>
+<li>piles are anchorable individually, instead of all one way</li>
+<li>added version checking; notification if versions of players don't match</li>
+<li>added undo and redo functionality (up to 64 individual actions) for 
+card movement, including all special pile movement</li>
+<li>added search capability for Force Pile, Used Pile, and Lost Pile</li>
+<li>added capability to load cards to the starting cards pile (for 
+Starting Effect and Defensive Shields, plus any Objective and 
+related cards that start on the table)</li>
+<li>added capability to ensure that all cards in a stack are flipped the 
+same way. the cards are flipped so that they match the flip state 
+of the card the cursor is over</li>
+<li>added some commonly-used messages in a listbox so they can be sent 
+quickly</li>
+<li>fixed a crash caused by searching a pile for a card and pressing 
+the OK button without selecting a card</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.6.0:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed bug where Holotable crashed if the last card on the table was 
+drawn from the Force pile with the 'd' key</li>
+<li>fixed limitation in pile movement reporting where movements were 
+incorrectly reported if the type of movement (draw, use, loss, etc.) 
+changed rapidly</li>
+<li>added function to change pile count color temporarily when a pile 
+count changes (to help prevent cheating)</li>
+<li>added an "acknowledge" button to cut down on needed typing</li>
+<li>added a function to notify the opponent you are using a card by pressing 
+the 'q' key while the cursor is over it (to cut down on typing)</li>
+<li>added starting cards and out of play piles</li>
+<li>added capability to search Reserve Deck or starting cards pile (with 
+opponent approval when connected) by card name</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.5.5:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed a bug where cards would move to incorrect locations for the opponent when rotated</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.5.4:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added the capability to use context menus to do some actions for cards/stacks</li>
+<li>a few other minor fixes</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.5.3:
+</p>
+
+<ul style="margin-right: 10px">
+<li>made card movement messages more reliable</li>
+<li>fixed numerous bugs related to the save game dialog</li>
+<li>various minor fixes and improvements</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.5.2:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added code to prevent the "jumping piles" problem some people experienced</li>
+<li>number of players playing a game on the central server is shown in 
+the central server chat/opponent selection dialog.  opponents are 
+shown together in the tooltip for the number of people playing a game 
+text label</li>
+<li>fixed a bug where cards with broken images could not be rotated</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.5.1:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed problem where sometimes recirculation would not move Used Pile 
+cards to the bottom of the Reserve Deck for the opponent</li>
+<li>added intelligent reporting of activation, Force use, drawing cards 
+from Reserve Deck, etc. in the chat area for both players (only 
+when the key commands are used)</li>
+<li>decks load faster</li>
+<li>updated server IP so that "Restore Defaults" works correctly</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.5.0:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added load/save game functionality, with password protection</li>
+<li>saved games restore table size and pile positions</li>
+<li>fixed some memory leaks and bugs that could cause crashes</li>
+<li>fixed problem where tooltip text would not pop up if image 'zoom' 
+was selected and the large image could not be found</li>
+<li>added support for .jpg images for cards (used if .gif not found)</li>
+<li>incorporated Linux support</li>
+<li>opponent's decks load faster</li>
+<li>fixed problem where pile placement would not be sent if playing 
+over the central server and a second game was started after 
+using "End Game" to end the first one</li>
+<li>made table autosizing &amp; pile positioning work better</li>
+<li>removed logging (obsolete and could allow cheating)</li>
+<li>added a few more informational messages</li>
+<li>added some code to aid in tailoring Holotable's look to user 
+preferences</li>
+<li>shuffling a stack no longer locks the program for a 
+short period of time</li>
+<li>fixed bug where opponent would not get updated z position when 
+moving a stack (stacks would look like they were underneath 
+other cards when moved and dropped)</li>
+<li>fixed bug where rotation could result in the opponent seeing a card 
+snap into a pile it was near</li>
+<li>added ability to draw from Force Pile and retrieve from Lost Pile
+('d' and 'x', respectively)</li>
+<li>added ability to change text color for opponent's and your chat messages, 
+which allows easier understanding of what happens in the game.  informational 
+messages are shown in the color set in holotable.rc</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.4.1:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed a few bugs in the network code, which should prevent several different problems, 
+especially when using the central server</li>
+<li>added a "Restore Defaults" button to the Options dialog, per several people's request.
+it restores the default playing surface size, window size, and server IP and port number</li>
+<li>several additional messages are displayed in the chat/log window</li>
+<li>bugfix so that more than ~70 cards may be moved in a stack at once</li>
+<li>table size auto-adjust should now work when playing over the central server</li>
+<li>added keyboard shortcuts for activating, using, and losing Force</li>
+<li>pile positions may be set in holotable.ini, and are automatically sent to the opponent
+when connecting peer to peer or starting a game over the central server</li>
+<li>fixed problems related to rotating cards while on a pile/at the bottom right corner of the 
+table</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.4.0:
+</p>
+
+<ul style="margin-right: 10px">
+<li>cards "stick" to the cursor reliably when moving in real time</li>
+<li>stacks can now be moved in real time (user can turn on and off)</li>
+<li>image "zoom" happens after a user-configurable delay, so it acts more like tooltip text</li>
+<li>added support for Force Pile, Reserve Deck, Used Pile, and Lost Pile areas (moveable)</li>
+<li>cards "snap" to these areas when dropped over them, and are automatically rotated to
+the correct orientation</li>
+<li>status bar shows count of Force Pile, Reserve Deck, Used Pile, and Lost Pile for each player</li>
+<li>added in-game chat capability</li>
+<li>chat area logs movement of cards to and from each player's hand</li>
+<li>chat area logs shuffling of stacks on the table, and opponent will see the
+shuffle graphic over the stack that was shuffled</li>
+<li>overhauled network code, resulting in much better stability</li>
+<li>program exit is confirmed with a dialog box</li>
+<li>fixed bug where hand area could get stuck in the not visible state</li>
+<li>HOLOTABLE_PATH environment variable allows intelligent loading of files</li>
+<li>installer creates holotable.ini on the fly, so you don't have to modify it if you 
+don't use the default installation directory</li>
+<li>several options to configure the "look" of the program through the holotable.rc file</li>
+<li>option to auto-adjust table size if opponent's table size is larger</li>
+<li>various code tweaks to improve speed, reduce processor load, etc.</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.3.1:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added key reference dialog</li>
+<li>both hand counts now shown at all times on a status bar</li>
+<li>when images exist, show large image instead of tooltip text ("zoom")</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.3.0:
+</p>
+
+<ul style="margin-right: 10px">
+<li>added server lobby (opponent selection and chat) capability to Holotable and the server program</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.2.2:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed bug where cards could get out of sync when double or triple right-clicking to flip</li>
+<li>fixed some of the flicker/redraw problems associated with selecting cards</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.2.1:
+</p>
+
+<ul style="margin-right: 10px">
+<li>fixed crash when selecting a stack of cards</li>
+<li>border configurable according to card set</li>
+</ul>
+
+<p class="sectionheader">
+Changes/bugfixes for version 0.2:
+</p>
+
+<ul style="margin-right: 10px">
+<li>could not connect multiple times to server without restarting</li>
+<li>added 'f' key flip functionality</li>
+<li>fixed problem where server port number did not load from options file correctly</li>
+<li>fixed problem where deck loader couldn't handle lines without a color spec</li>
+<li>fixed problem where remote deck files couldn't end without a newline after the last card</li>
+<li>added support for background image on table</li>
+<li>added color to hand background</li>
+<li>added rotation support</li>
+<li>fixed problem where only first connection works when connecting peer to peer</li>
+<li>added ability to query for own and opponent's number of cards in hand</li>
+<li>added vertical and horizontal fan capability</li>
+<li>added ability to cancel an accept()</li>
+<li>made move to/from hand keep the layout of cards</li>
+<li>added graphic that shows when shuffling</li>
+<li>worked around tooltip character limit for objectives/made card text separate for each side</li>
+<li>options dialog doesn't lose info when cancel is pressed (original settings restored in window)</li>
+<li>made default buttons work (Options dialog, About dialog)</li>
+<li>fixed problem where dialogs got killed forever if you close them with the "X"</li>
+<li>new program icon</li>
+<li>took care of white corners on cards</li>
+<li>added option for moving single cards in real time</li>
+<li>added options for window startup size and table background</li>
+<li>added icons to menu items</li>
+<li>updated About dialog</li>
+<li>configurable card border based on card type</li>
+</ul>
+

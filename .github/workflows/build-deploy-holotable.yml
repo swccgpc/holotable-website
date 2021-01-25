@@ -1,0 +1,41 @@
+---
+
+name: build and deploy holotable website
+
+on: 
+  push: 
+    branches: 
+      - master
+
+jobs:
+  deploy-vkit: 
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: gem install jekyll
+        run: gem install jekyll
+
+      - name: jekyll build
+        run: jekyll build
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+
+      - name: sync to s3
+        run: aws s3 sync _site/ s3://holotable.starwarsccg.org/
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+
+
+
+
+
+
+

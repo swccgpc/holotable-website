@@ -1,0 +1,154 @@
+body {
+	margin:10px 10px 10px 10px;
+	padding:0px;
+	background-image: url(images/Premiere-Booster.jpg);
+	}
+
+#leftcontent {
+	position: absolute;
+	left:10px;
+	top:267px;
+	width:200px;
+	background:#fff;
+	border:1px solid #000;
+	}
+
+#centercontent {
+	background:#fff;
+	margin-left: 200px;
+	margin-right:200px;
+	border:1px solid #000;
+	/*
+	IE5x PC mis-implements the box model. Because of that we sometimes have
+	to perform a little CSS trickery to get pixel-perfect display across browsers.
+	The following bit of code was proposed by Tantek Celik, and it preys upon a CSS
+	parsing bug in IE5x PC that will prematurly close a style rule when it runs
+	into the string "\"}\"". After that string appears in a rule, then, we can override
+	previously set attribute values and only browsers without the parse bug will
+	recognize the new values. So any of the name-value pairs above this comment
+	that we need to override for browsers with correct box-model implementations
+	will be listed below.
+	
+	We use the voice-family property because it is likely to be used very infrequently,
+	and where it is used it will be set on the body tag. So the second voice-family value 
+	of "inherit" will override our bogus "\"}\"" value and allow the proper value to
+	cascade down from the body tag.
+
+	The style rule immediately following this rule offers another chance for CSS2
+	aware browsers to pick up the values meant for correct box-model implementations.
+	It uses a CSS2 selector that will be ignored by IE5x PC.
+	
+	Read more at http://www.glish.com/css/hacks.asp
+	*/
+	
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	margin-left: 201px;
+	margin-right: 201px;
+	}
+html>body #centercontent {
+	margin-left: 201px;
+	margin-right: 201px;
+	}
+
+#rightcontent {
+	position: absolute;
+	/* This really should be 10, but IE 6 PC messes it up */
+	right:9px;
+	top:267px;
+	width:200px;
+	background:#fff;
+	border:1px solid #000;
+	}
+/* IE 6 doesn't see this */
+html>body #rightcontent {
+     right: 10px;
+     }
+	
+#bottomcontent {
+	background:#fff;
+	border:1px solid #000;
+	margin-left: 201px;
+	margin-right: 201px;
+	}
+
+#pageheader {
+	background:#fff;
+	text-align: center;
+	vertical-align:bottom;
+	height:253px;
+	width:458px;
+	margin-left: auto;
+	margin-right: auto;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	height:257px;
+	}
+
+html>body #pageheader {
+	height:257px;
+	}
+	
+p,h1,h3,pre {
+	margin:10px 10px 10px 10px;
+	}
+	
+#pageheader img {
+	vertical-align:bottom 
+	}
+
+p.sectionheader {
+	font-weight: bold;
+	font-size:18px;
+	}
+	
+p.menuheader {
+	font-weight: bold;
+	font-size:14px;
+	}
+	
+p.pagetitle {
+	text-align: center;
+	font-weight: bold;
+	font-size: 28px;
+	}
+	
+#featurelist li {
+	vertical-align: middle;
+	list-style-type: disc;
+	line-height: 40px;
+	margin-left: 10px;
+	}
+	
+li {
+     line-height: normal;
+     list-style-type: disc;
+}
+
+table.ratings {
+     min-height: 500px;
+     margin: auto;
+     padding: 8px;
+     border-width: 1px;
+     border-color: black;
+     border-collapse: collapse;
+}
+
+table.ratings th {
+     font-size: 20px;
+     background-color: gray;
+     
+     padding: 8px;
+     border-width: 1px;
+     border-color: black;
+     border-style: solid;
+}
+
+table.ratings td {
+     font-size: 18px;
+     
+     padding: 8px;
+     border-width: 1px;
+     border-color: black;
+     border-style: solid;
+}

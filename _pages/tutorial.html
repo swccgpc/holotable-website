@@ -1,0 +1,93 @@
+---
+layout: holotable
+title:  "Tutorial"
+permalink: /tutorial/
+---
+
+<p class="pagetitle">Getting started with Holotable</p>
+     
+     <p>
+     Thanks to Psychobabble for updating this tutorial in October 2006.  It was very out of date!
+     </p>
+
+<p class="sectionheader">Installation</p>
+     <p>
+     The first step to take is (obviously) downloading the Holotable installer.  You 
+     can do that from the <a href="downloads.html">downloads</a> page.  If you've never 
+     downloaded Holotable before, you'll probably want the installer that has the card 
+     images; later on when you just want to get a program update, you should just 
+     download the version with no images.  You will also need to download GTK; there 
+     are links to download it on that page as well.
+     </p>
+     <p>
+     Once you've downloaded the Holotable installer, open it up.  When you get to the 
+     "Choose Components" screen, you'll have the option to select which parts to install.
+     Generally, installing everything is the most sensible choice.  However, if you 
+     downloaded just to get a new program version, you will only need to select 
+     whatever it is that you want updated (i.e., Holotable and/or Holodeck).
+     </p>
+     <p>
+     The next screen allows you to choose what directory to use for the installation.  
+     Using the default will allow you to quickly start using Holotable and Holodeck 
+     without further adjustments.  Feel free to change the default if you wish; just 
+     check out the <a href="faq.html">FAQ</a> page if you have problems.
+     </p>
+     <p>
+     Installation of GTK is pretty straightforward.  Changing the default installation 
+     directory should have no ill effects.
+     </p>
+
+<p class="sectionheader">Creating decks</p>
+<p>Open Holodeck. Then choose File->Load CDF, which will bring up a file selection dialog box. From here you need to open the card data file (.cdf) for the deck you wish to build (either light or dark side). The default directory here should have the darkside.cdf and lightside.cdf files you need, otherwise you will need to navigate to the directory that holds your CDF files. </p>
+
+<p>To add a card, select it from the list of cards, then click "Add card". The card will show up in the deck listing at the bottom. You can add more of the same card by clicking "Add card" again. If you later decide you want more of a particular card, you can just select it in your deck listing and then click "Add card". To delete a card from your deck, select it and click "Delete card". </p>
+
+<p>You can flag cards as "starting" by clicking on the + symbol underneath "delete card". Cards marked in this way will load in your "starting cards" pile when you load the deck in Holotable. It is suggested that you use this feature for your defensive shields and starting effect. Some players also like to have their objective and other cards which start on the table load up in this way. Clicking the - symbol next to the + will un-mark a card as starting.</p>
+
+<p>The arrow buttons control the order of cards in the deck when it loads. Cards at the top of your deck list will be at the bottom of the deck when it is loaded and vice versa. So if you have cards that you will use at the start (such as an Objective, a Starting Interrupt, Effects etc. if you don't have them flagged as starting), it is best to put those cards at the end of the deck listing.</p>
+
+<p>You can search for the card you want by typing its name in the "Name contains" field and clicking enter. You can search for other fields such as "Lore" and "Gametext" in a similar way. If you do not need the advanced search features, you can turn them off by clicking on the "Advanced Search" button. You can also filter the entire list by "Card type" or "Set" by selecting the type you want from the appropriate drop-down menu, at the bottom of the advanced search area.</p>
+
+<p>You can save your deck by choosing File->Save. If you've made changes and haven't saved your deck yet, you will be prompted to choose the directory and filename you want to use for saving the file. You don't need to add any file extension; if there is no period in the filename you enter, Holodeck will append ".htd" to the name. </p>
+
+<p class="sectionheader">Holotable: the basics</p>
+<p>Once you've built a deck and saved it, you can load that deck in Holotable. Go to File->Load deck and pick your deck file. By default all cards (except those flagged as starting) will load in your Reserve Deck. This can be changed to loading in hand in Table->Options if you want. When playing a game, your opponent cannot see any of the cards in your hand; he can only find out how many cards are there. Your cards will load facedown. You can flip the entire stack over (Reserve or Starting depending on where the cards you need to start are) by holding the Control key and either right-clicking on the stack or pressing the 'f' key with the cursor over the stack. Flipping the whole stack is not like picking up a stack of cards in real life; it's like individually turning each one of them over. So whichever card was on top is the one that's still on top after the flip.</p>
+
+<p>Now that your cards are faceup, you can look through your stack to find your starting cards. Using the 'n' and 'p' keys to go to the next and previous card in the stack, respectively (note, this will not work if the pile you are manipulating is in a pile space such as "Reserve Deck" or "Starting Cards". When you find one of your starting cards, click on it (and hold), then drag the cursor fully to the 'table' area and release. Your card will move with the cursor if you have the option set in Table->Options (it's on by default). If you want to move a stack of cards, hold Control, then click (and hold) on any of the cards in the stack and drag the cursor to wherever you want the stack to go. A stack is defined as any cards that overlap with the card you click on, plus any that they overlap with, etc.</p>
+
+<p>Once you have some cards on the table, you may want to rotate some of them using the 'r' key while the mouse is over the card you want to rotate. Holding Shift changes the direction of rotation. If you want to straighten up any stack of cards, put the cursor over the stack and press 'c'. To shuffle a stack, put the cursor over it and press 'Shift-s'. You'll see an image appear briefly over the stack, which indicates that it has been shuffled. You should do this to your Reserve Deck before you start playing.</p>
+
+<p>You can manipulate cards in-game in one of two ways. You can either use and remember the key commands (found in Help->Key Reference, although they can be changed by modifying the keybindings.ini file, found in your install directory) or use the command window. To open the command window click Table->Command Window.</p>
+
+<p class="sectionheader">Getting connected to an opponent</p>
+
+<p>It is possible to play a game against yourself (Shift-q to switch sides), but not as fun for obvious reasons! The easiest way to find an opponent is to connect to the central server. This can be done through Server->Connect. Provided you have the latest version of the program (check on the front page), this should take you to the correct IP address by default. If it does not work, try going to Table->Options->Connectivity and clicking "Restore Defaults". If it does work, you should immediately be prompted for a password. The server is secure and to connect you need to have set up an account at the <a href="http://www.holotable.com/phpBB2">Holotable forums</a>. You use the same username and password for the server as you did for your forum account (set your username in Table->Options->Connectivity).</p>
+
+<p>Once you've connected you will be waiting in the lobby. This is a good place to wait if you are looking for an opponent. If anyone else connects to the server, the program will flash in your task bar, so you can go and do something else and leave Holotable running in the background. If there is another person there, you can request a game by clicking on their name and hitting "Request game". If they accept, you will be prompted to set a password for the save game for this game and, once both players have done this, you will be in-game.</p>
+
+<p>If you want to connect directly to your opponent, one of you should choose Server->Accept. The bottom-right status area will say "Waiting for connection on port X", where X is a number. The person who is not waiting for a connection should find out the IP address of the first person (can be found in many ways, but one is to have the person go to www.whatismyip.com) as well as the port number they're waiting for the connection on. The second person should enter this information in their options (Table->Options), then choose Server->Connect. A connection should quickly be established; the status bar will update with any details. There are a number of things which may prevent a direct connection, such as a network set up with a router. It is difficult to work around this problem, but you might want to try having the other person attempt to host if it does not work at first.</p>
+
+<p>Once you are connected to your opponent, each player's deck should be loaded. It is very important to have a clear table at this point. Decks should be loaded one at a time; one person should wait until the other person's deck loads before loading theirs. Once decks are loaded, you can begin playing.</p>
+
+     <p class="sectionheader">Other stuff</p>
+     <p>
+     In case you accidentally load a deck you don't want, or you're done with a game and want 
+     to start over, Holotable has two options for clearing cards from the table: Clear local 
+     and Clear all.  Choosing Table->Clear local will remove only cards that you loaded.  If 
+     you are or had been connected to an opponent who loaded cards, those cards will still 
+     stay on the table or in either player's hand.  If you choose Table->Clear all, every card 
+     that was loaded will be removed.  In either case, if you are currently connected to an 
+     opponent, the removals will be reflected on their table as well.  So be very careful in 
+     using either command, as doing them in the middle of a game (especially if you're losing) 
+     could make someone rather upset.  It is important to use Table->Clear all if you're starting 
+     a new game with someone after having played a game already, especially if it's a new opponent.
+     Otherwise, Holotable could get out of sync and crash.
+     </p>
+     
+     <p class="sectionheader">Tips/reminders/etc.</p>
+     <ul>
+     <li>Load decks AFTER connecting to your opponent</li>
+     <li>p cycles through a deck faster than n</li>
+     <li>Use v to toggle the hand area visibility; it'll allow you to see more of the table</li>
+     </ul>
+
