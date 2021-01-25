@@ -1,0 +1,15 @@
+---
+
+#profile:   swccg-production
+
+s3_bucket: holotable.starwarsccg.org
+
+gzip:
+  - .html
+  - .css
+  - .md
+gzip_zopfli: false
+
+cloudfront_distribution_id: E2YAV8XKR86PXW
+cloudfront_invalidate_root: true
+

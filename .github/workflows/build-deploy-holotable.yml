@@ -17,6 +17,9 @@ jobs:
       - name: gem install jekyll
         run: gem install jekyll
 
+      - name: gem install s3_website
+        run: gem install s3_website
+
       - name: jekyll build
         run: jekyll build
         env:
@@ -25,8 +28,8 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
 
-      - name: sync to s3
-        run: aws s3 sync _site/ s3://holotable.starwarsccg.org/
+      - name: s3_website push
+        run: s3_website push
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
