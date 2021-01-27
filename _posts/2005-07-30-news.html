@@ -1,0 +1,10 @@
+---
+layout: post
+title: 2005-07-30
+description: 2005-07-30
+modified: 2005-07-30
+category: news
+published: true
+---
+
+<p>Holotable 0.5.0 is now available as a preliminary release. Just check out the updates download section to get it. I decided to make it 0.5.0 instead of 0.4.2 (as I had previously referred to it) because the new version can't be used with any previous versions. This is due to the password protection that is now present. When you start a game, both players are asked to provide a password. The password entered by your opponent will be included in the save game file if you decide to save the game. This means that (theoretically) only your opponent will be able to 'unlock' your game later (and likewise for your opponent). When you load a game, your opponent will be asked to provide the correct password; if he does not, the load will abort.Note that the load and save functionality will not work just for single-player testing of decks.<br /><br />Your saved game stores information about all your cards and their placement on the table, in your hand, and the opponent's hand. It also keeps the table size and pile positions, so these will be restored when your load the saved game. There are a few limitations, which may or may not be fixed at some point: the stacking order of your opponent's cards is not taken into account, and if you 'steal' an opponent's card, the card is not kept in your save file. This means that if you have overlapping cards, whoever loads their saved game last will have their cards on top. This generally shouldn't be a problem, but in the case of inserts or something of that sort where order of your opponent's card(s) within your Reserve Deck is important, you won't get the right result.<br /><br />There are several other bugfixes and other improvements, which are listed in the updated readme.txt file that you'll get with the installer.<br /><br />Coming soon (i.e., probably by August 1): Linux support and some information on how to customize the look of your Holotable. Check out this <a href="/images/yodatheme.jpg">sneak preview</a><br /><br />Matt</p>

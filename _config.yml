@@ -8,12 +8,16 @@ url: ""
 twitter_username: swccgpc
 github_username:  swccgpc
 
+excerpt_separator: N/A---------N/A
+permalink: /news/:year/:month/:day/
+
 plugins:
   - jekyll-feed
 
 include:
   - "_pages"
   - "_redirects"
+  - "_news_indexes"
 
 exclude:
   - "download/windows"

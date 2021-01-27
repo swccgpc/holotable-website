@@ -21,7 +21,10 @@ jobs:
         run: gem install s3_website
 
       - name: jekyll build
-        run: jekyll build
+        run: |+
+          mkdir _news_indexes ; true
+          ruby _make_posts_indexes.rb
+          jekyll build
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

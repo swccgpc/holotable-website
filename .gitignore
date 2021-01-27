@@ -3,6 +3,7 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+_news_indexes
 
 
 .DS_Store
