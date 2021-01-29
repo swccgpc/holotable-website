@@ -22,8 +22,12 @@ include:
 exclude:
   - "download/windows"
   - "download/linux"
+  - "download/cards"
+  - "s3_website.yml"
 
 downloadables:
+  holotable_latest_version: "0.9.10"
+  holodeck_latest_version: "0.4.0"
   windows:
     holotable:
       url: "https://res.starwarsccg.org/holotable/windows/holotable-0.9.9_install.exe"
@@ -33,8 +37,8 @@ downloadables:
       url: "https://res.starwarsccg.org/holotable/windows/holotable-large_images_postreset.exe"
       name: "Large images (post-reset)"
     update:
-      url: "https://res.starwarsccg.org/holotable/windows/holotable-0.9.9_update.exe"
-      name: "Holotable 0.9.9 update"
+      url: "https://res.starwarsccg.org/holotable/windows/holotable-0.9.10_update.exe"
+      name: "Holotable 0.9.10 update"
     gtk2:
       url: "https://res.starwarsccg.org/holotable/windows/gtk-2.12.9-win32-2.exe"
       name: "gtk 2.12.9"

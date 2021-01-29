@@ -5,6 +5,8 @@ _site
 vendor
 _news_indexes
 
+download
+
 
 .DS_Store
 *.tar.bz2
