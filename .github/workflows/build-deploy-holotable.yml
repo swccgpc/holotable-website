@@ -19,9 +19,6 @@ jobs:
         with:
           ruby-version: 2.6
 
-      - name: gem install s3_website
-        run: sudo gem install s3_website
-
       - name: jekyll build
         run: |+
           mkdir _news_indexes ; true
@@ -29,10 +26,6 @@ jobs:
           echo "Make _news_indexes"
           echo
           ruby _make_posts_indexes.rb
-          echo
-          echo "jekyll build"
-          echo
-          jekyll build
 
       - name: Set up Jekyll
         uses: helaili/jekyll-action@v2
@@ -40,9 +33,16 @@ jobs:
           jekyll_src: ./
           build_only: true
 
-
       - name: s3_website push
-        run: s3_website push
+        run: |
+          echo
+          echo "Install s3_website"
+          echo
+          sudo gem install s3_website
+          echo
+          echo "s3_website push"
+          echo
+          s3_website push
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

@@ -22,7 +22,7 @@ end
 
 alldates = Hash.new
 
-`rm _news_indexes/* ; true`
+`if [ -d _news_indexes ]; then rm _news_indexes/* ; fi ; true`
 posts = `find _posts/ -type f`
 posts.split(/[\r\n]+/).each do |post|
 
