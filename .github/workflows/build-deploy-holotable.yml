@@ -19,22 +19,27 @@ jobs:
         with:
           ruby-version: 2.6
 
-      - name: gem install jekyll
-        run: sudo gem install jekyll
-
       - name: gem install s3_website
         run: sudo gem install s3_website
 
       - name: jekyll build
         run: |+
           mkdir _news_indexes ; true
+          echo
+          echo "Make _news_indexes"
+          echo
           ruby _make_posts_indexes.rb
+          echo
+          echo "jekyll build"
+          echo
           jekyll build
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ secrets.AWS_REGION }}
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+
+      - name: Set up Jekyll
+        uses: helaili/jekyll-action@v2
+        with:
+          jekyll_src: ./
+          build_only: true
+
 
       - name: s3_website push
         run: s3_website push
