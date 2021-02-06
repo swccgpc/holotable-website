@@ -5,14 +5,14 @@ name: build and deploy holotable website
 on: 
   push: 
     branches: 
-      - master
+      - main
 
 jobs:
   deploy-vkit: 
     runs-on: "ubuntu-latest"
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
 
       - name: gem install jekyll
         run: gem install jekyll
