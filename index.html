@@ -9,7 +9,7 @@ permalink: /
 <p class="pagetitle">News</p>
 
 {% for post in site.posts limit:7 %}
-<p class="sectionheader"><a href="{{ post.url }}">{{ post.modified }}</a></p>
+<p class="sectionheader"><a href="{{ post.url }}" title="{{ post.modified }}">{{ post.title }}</a></p>
 {{ post.content }}
 {% endfor %}
 

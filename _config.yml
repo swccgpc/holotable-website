@@ -13,6 +13,7 @@ permalink: /news/:year/:month/:day/
 
 plugins:
   - jekyll-feed
+  - jekyll-admin
 
 include:
   - "_pages"

@@ -1,6 +1,6 @@
 ---
 
-#profile:   swccg-production
+profile:   swccg-production
 
 s3_bucket: holotable.starwarsccg.org
 
