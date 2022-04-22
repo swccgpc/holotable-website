@@ -6,83 +6,63 @@ permalink: /faq/
 
 <p class="pagetitle">Holotable/Holodeck FAQ</p>
 
-<p class="sectionheader">Whenever I try to connect to the central server with Holotable, I get a prompt to enter the password 
-for 'Joe user', which is not the username I signed up for on the forum.  I enter my password and it gets rejected.  What do 
-I do?</p>
-<p>Holotable does not know the username you want to use until you tell it.  "Joe user" is supposed to be an indication that 
-your username hasn't been set in the options.  Go to Table->Options->Connectivity tab and then enter your username in the 
-appropriate field.
+<p class="sectionheader">Whenever I try to connect to the central server with Holotable, I get a prompt to enter the password for 'Joe user', which is not the username I signed up for on the forum. I enter my password and it gets rejected. What do I do?</p>
+<p>Holotable does not know the username you want to use until you tell it. "Joe user" is supposed to be an indication that your username hasn't been set in the options. Go to Table->Options->Connectivity tab and then enter your username in the appropriate field.
 </p>
 
 <p class="sectionheader">How do I convince Holodeck to show cards so I can build a deck?</p>
-<p>You must use File->Load CDF to load a .cdf file for either Light or Dark Side.  Once you do this, you'll see cards from the 
-appropriate side and can build your deck.
+<p>You must use File->Load CDF to load a .cdf file for either Light or Dark Side. Once you do this, you'll see cards from the appropriate side and can build your deck.
 </p>
 
-<p class="sectionheader">Whenever I try to run Holotable or Holodeck, it tells me it can't find "intl.dll" or 
-"libatk-1.0-0.dll" or some such and won't run.  I've reinstalled and it still doesn't work.  What's wrong?</p>
-<p>You must have GTK 2.12 (or higher) installed in order to run Holotable and Holodeck.  These files are part 
-of GTK, and if they can't be found, neither program will run.  Go to the <a href="/downloads/">Downloads &amp; Links</a> 
-page to find the link to get GTK.
+<p class="sectionheader">Whenever I try to run Holotable or Holodeck, it tells me it can't find "intl.dll" or "libatk-1.0-0.dll" or some such and won't run. I've reinstalled and it still doesn't work. What's wrong?</p>
+<p>You must have GTK 2.12 (or higher) installed in order to run Holotable and Holodeck. These files are part of GTK, and if they can't be found, neither program will run. Go to the <a href="/downloads/">Downloads &amp; Links</a> page to find the link to get GTK.
 </p>
 
-<p class="sectionheader">I get the message "Failed to load local image data; scan your image tree to recreate 
-the file!" when Holotable checks for updates.  How do I fix it?</p>
-<p>This problem means that there is no list of local image files for Holotable to check against the list on the 
-server.  You can fix this by going to Table->Options->Updates tab and clicking the "Scan now" button.
+<p class="sectionheader">I get the message "Failed to load local image data; scan your image tree to recreate the file!" when Holotable checks for updates. How do I fix it?</p>
+<p>This problem means that there is no list of local image files for Holotable to check against the list on the server. You can fix this by going to Table->Options->Updates tab and clicking the "Scan now" button.
 </p>
 
-<p class="sectionheader">I have Windows Vista/7 and Holotable CDF and image updates don't work.  It downloads the 
-files okay but always redownloads the same things next time it checks for updates.</p>
-<p>Unfortunately, on Vista and 7, Holotable generally won't work correctly if you have it installed in the 
-Program Files directory.  The files that Holotable downloads are going somewhere other than the Holotable 
-installation directory (because the OS diverts them), so Holotable never sees the files and wants to get 
-them again.  The solution for this is to install Holotable in a different directory.  The installers should at 
-least warn you about installing to Program Files; if it's your first time installing, it should automatically 
-try to install to a different location that will work okay.
+<p class="sectionheader">I have Windows Vista/7 and Holotable CDF and image updates don't work. It downloads the files okay but always redownloads the same things next time it checks for updates.</p>
+<p>Unfortunately, on Vista and 7, Holotable generally won't work correctly if you have it installed in the Program Files directory. The files that Holotable downloads are going somewhere other than the Holotable installation directory (because the OS diverts them), so Holotable never sees the files and wants to get them again. The solution for this is to install Holotable in a different directory. The installers should at least warn you about installing to Program Files; if it's your first time installing, it should automatically try to install to a different location that will work okay.
 </p>
 
-<p class="sectionheader">My Holotable continuously downloads the same CDFs and always tells me it couldn't load 
-CDF data.  What is wrong?</p>
-<p>Make sure your HOLOTABLE_PATH environment variable is set to the directory where you have Holotable installed.  
-This is done for you by the installer if you use Windows, but on Linux you will need to do it yourself.  If 
-you are new to Linux, try putting "export HOLOTABLE_PATH=&lt;install directory&gt;" in your home directory's .bashrc 
-file.
+<p class="sectionheader">My Holotable continuously downloads the same CDFs and always tells me it couldn't load CDF data. What is wrong?</p>
+<p>Make sure your HOLOTABLE_PATH environment variable is set to the directory where you have Holotable installed. This is done for you by the installer if you use Windows, but on Linux you will need to do it yourself. If you are new to Linux, try putting "export HOLOTABLE_PATH=&lt;install directory&gt;" in your home directory's .bashrc file.
 </p>
 
-<p class="sectionheader">I've installed GTK and Holotable, but whenever I try to run it I get errors like "Could 
-not find entry point 'gdk_pixbuf_new_from_file_utf8' in libgdkpixbuf.dll".</p>
-<p>This is generally due to having old GTK DLLs lying around on your system.  You must remove these or get 
-your system to look at the new ones first (by manipulating your PATH environment variable).  However, if 
-the old DLLs are in your Windows\System32 directory, you will be forced to delete them or else hand copy 
-all the required DLLs into your Holotable installation directory.
+<p class="sectionheader">I've installed GTK and Holotable, but whenever I try to run it I get errors like "Could not find entry point 'gdk_pixbuf_new_from_file_utf8' in libgdkpixbuf.dll".</p>
+<p>This is generally due to having old GTK DLLs lying around on your system. You must remove these or get your system to look at the new ones first (by manipulating your PATH environment variable). However, if the old DLLs are in your Windows\System32 directory, you will be forced to delete them or else hand copy all the required DLLs into your Holotable installation directory.
 </p>
 
 <p class="sectionheader">Why can't I see large card images even when I choose image "zoom"?</p>
-<p>Generally this happens when you haven't downloaded and installed the large images.  They come 
+<p>Generally this happens when you haven't downloaded and installed the large images. They come 
 in a separate download because they are over 200MB.
 </p>
 
 <p class="sectionheader">Why does Holotable use so much memory? (updated)</p>
-<p>The main reason that memory usage was an issue was a memory leak in versions prior to 0.5.0.  The 
-leak was in code relating to use of the large images, so the leaks added up over the course of a 
-game, giving people low memory errors and causing crashes.
+<p>The main reason that memory usage was an issue was a memory leak in versions prior to 0.5.0. The leak was in code relating to use of the large images, so the leaks added up over the course of a game, giving people low memory errors and causing crashes.
 </p>
 
-<p class="sectionheader">I was playing a game, and the card images weren't right.  What happened?</p>
-<p>It is extremely important that decks be loaded separately.  One player should load his deck, then 
-the other should load his after the first deck has finished loading for both players.  You should 
+<p class="sectionheader">I was playing a game, and the card images weren't right. What happened?</p>
+<p>It is extremely important that decks be loaded separately. One player should load his deck, then 
+the other should load his after the first deck has finished loading for both players. You should 
 confirm that the number of cards loaded for your opponent is the same as the number loaded for you.
 </p>
 <p>If you don't ensure that the decks load without "overlapping", you could end up having a card be 
-different for your opponent.  For example, to you it would be Ben Kenobi, but to your opponent it 
-might be Sense.  If Holotable hasn't crashed on either of you by the time you notice this (it may 
+different for your opponent. For example, to you it would be Ben Kenobi, but to your opponent it 
+might be Sense. If Holotable hasn't crashed on either of you by the time you notice this (it may 
 well have already done so), you should clear the table (Table->Clear All) and load your decks again.
 </p>
 
-<p class="sectionheader">I'm using Windows 98/ME.  Why won't Holotable/Holodeck run?</p>
-<p>There seem to be problems with GTK on Windows 98/ME.  I have personally been successful in making both 
-Holotable and Holodeck run under Windows 98 (Second Edition), so it can be done.  Please post in the forums if 
-you're having trouble, and I'll try to help figure out what's going on.
+<p class="sectionheader">I'm using Windows 98/ME. Why won't Holotable/Holodeck run?</p>
+<p>There seem to be problems with GTK on Windows 98/ME. I have personally been successful in making both Holotable and Holodeck run under Windows 98 (Second Edition), so it can be done. Please post in the forums if you're having trouble, and I'll try to help figure out what's going on.
 </p>
 
+<p class="sectionheader">I'm using Windows XP. Why won't Holotable/Holodeck 0.9.10 download updates?</p>
+<p>Windows XP does not support the latest TLS encryption used on servers made available on operating systems released after Windows XP. Holotable 0.9.10 is known to work correctly on Windows 7 and later.
+</p>
+
+{% comment %}
+<p class="sectionheader">Could not connect to www.holotable.com on port 5320</p>
+<p></p>
+{% endcomment %}

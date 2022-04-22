@@ -91,6 +91,8 @@ html>body #pageheader {
   
 p,h1,h3,pre {
   margin:10px 10px 10px 10px;
+  font-family:sans-serif;
+  font-size:10pt;
 }
   
 #pageheader img {
@@ -135,8 +137,9 @@ table.ratings {
 }
 
 table.ratings th {
-  font-size: 20px;
-  background-color: gray;
+  font-size: 12pt;
+  background-color: #333333;
+  color:#ffffff;
   
   padding: 8px;
   border-width: 1px;
@@ -145,10 +148,27 @@ table.ratings th {
 }
 
 table.ratings td {
-  font-size: 18px;
+  font-size: 10pt;
   
   padding: 8px;
   border-width: 1px;
   border-color: black;
   border-style: solid;
 }
+
+table.ratings tr.even td {
+  background-color:#dddddd;
+}
+
+table.ratings tr td.rankid {
+  font-weight:bold;
+  font-family:monospace;
+  text-align:center;
+}
+
+div#rightcontent ul li, div#rightcontent ul li a {
+  font-family:sans-serif;
+  font-size:10pt;
+}
+
+
