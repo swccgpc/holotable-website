@@ -30,12 +30,6 @@ jobs:
           echo
           ruby _make_posts_indexes.rb
 
-      - name: Set up Jekyll
-        uses: helaili/jekyll-action@v2
-        with:
-          jekyll_src: ./
-          build_only: true
-
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -48,14 +42,8 @@ jobs:
 
       - name: s3_website push
         run: |
-          echo
-          echo "Install s3_website"
-          echo
-          sudo gem install s3_website
-          echo
-          echo "s3_website push"
-          echo
-          s3_website push
+          aws --profile=swccg-production s3 sync _site/ s3://holotable.starwarsccg.org/
+          aws --profile=swccg-production cloudfront create-invalidation --distribution-id E2YAV8XKR86PXW  --paths "/" "/*"
 
 
 
