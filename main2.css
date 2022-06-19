@@ -1,0 +1,157 @@
+body {
+  margin:10px 10px 10px 10px;
+  padding:0px;
+  background-image: url(/images/Premiere-Booster.jpg);
+}
+
+#leftcontent {
+  position: absolute;
+  left:10px;
+  top:190px;
+  width:200px;
+  background:#fff;
+  border:1px solid #000;
+}
+
+#centercontent {
+  background:#fff;
+  margin-left: 200px;
+  margin-right:200px;
+  border:1px solid #000;
+  voice-family: "\"}\"";
+  voice-family: inherit;
+  margin-left: 201px;
+  margin-right: 201px;
+}
+html>body #centercontent {
+  margin-left: 201px;
+  margin-right: 201px;
+}
+
+#rightcontent {
+  position: absolute;
+  /* This really should be 10, but IE 6 PC messes it up */
+  right:9px;
+  top:190px;
+  width:200px;
+  background:#fff;
+  border:1px solid #000;
+}
+/* IE 6 doesn't see this */
+html>body #rightcontent {
+  right: 10px;
+}
+  
+#bottomcontent {
+  background:#fff;
+  border:1px solid #000;
+  margin-left: 201px;
+  margin-right: 201px;
+}
+
+#pageheader {
+  background:none;
+  text-align: center;
+  vertical-align:bottom;
+  height:180px;
+  width:458px;
+  margin-left: auto;
+  margin-right: auto;
+  voice-family: "\"}\"";
+  voice-family: inherit;
+}
+
+p,h1,pre {
+  margin:10px 10px 10px 10px;
+  font-family:sans-serif;
+  font-size:10pt;
+}
+  
+h3 {
+  margin:10px 10px 10px 10px;
+  font-family:sans-serif;
+  font-size:18pt;
+}
+
+#pageheader img {
+  vertical-align:bottom 
+}
+
+p.sectionheader {
+  font-weight: bold;
+  font-size:18px;
+}
+  
+p.menuheader {
+  font-weight: bold;
+  font-size:14px;
+}
+  
+p.pagetitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+}
+  
+#featurelist li {
+  vertical-align: middle;
+  list-style-type: disc;
+  line-height: 40px;
+  margin-left: 10px;
+}
+  
+li {
+  line-height: normal;
+  list-style-type: disc;
+}
+
+table.ratings {
+  min-height: 500px;
+  margin: auto;
+  padding: 8px;
+  border-width: 1px;
+  border-color: black;
+  border-collapse: collapse;
+}
+
+table.ratings th {
+  font-size: 12pt;
+  background-color: #333333;
+  color:#ffffff;
+  
+  padding: 8px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+table.ratings td {
+  font-size: 10pt;
+  
+  padding: 8px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+table.ratings tr.even td {
+  background-color:#dddddd;
+}
+
+table.ratings tr td.rankid {
+  font-weight:bold;
+  font-family:monospace;
+  text-align:center;
+}
+
+div#rightcontent ul li, div#rightcontent ul li a {
+  font-family:sans-serif;
+  font-size:10pt;
+}
+
+code {
+  font-family:monospace;
+  background-color:#eeeeee;
+  color:#000000;
+  padding:5px;
+}

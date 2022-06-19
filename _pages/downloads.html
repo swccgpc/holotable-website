@@ -1,85 +1,86 @@
 ---
-layout: holotable
+layout: holotable2
 title:  "Downloads"
 permalink: /downloads/
 ---
 
 <p class="pagetitle">Downloads</p>
-<p class="sectionheader">Latest program updates</p>
-<p>{{ site.downloadables.linux.holodeck.description }}</p>
-<br />
-<p class="sectionheader">Remember to get GTK</p>
-<p>Install at least version 2.12 of GTK. You must install GTK 2.12 or higher to run Holotable and Holodeck. Windows 
-  users can download a GTK installer directly from our server <a href="{{ site.downloadables.windows.gtk2.url }}">here</a>.
-  A variety of versions can be downloaded from <a href="http://sourceforge.net/userapps/mediawiki/alex-sh/index.html?title=Downloads">sourceforge.net</a>. Vista <em>(and possibly Windows 7)</em> users may need to 
-  experiment with different versions to get one that works best for them if crashes/lockups occur.
-</p>
 
-<p class="sectionheader">What to download</p>
-<p style="font-weight: bold">Windows users:</p>
+
+<h3>GTK 2</h3>
 <div style="margin-left: 20px">
-<p>New installations:</p>
-<br />
-  <ul>
-      <li>The latest version from the Holotable full installers category: <ul>
-
-<li><a href="{{ site.downloadables.windows.holotable.url }}">{{ site.downloadables.windows.holotable.name }}</a></li>
-
-<li><a href="{{ site.downloadables.linux.holotable.url }}">{{ site.downloadables.linux.holotable.name }}</a></li>
-
-</ul></li>
-      <li>Optionally, the latest large images from the Card images category: <a href="{{ site.downloadables.linux.largeimages.url }}">{{ site.downloadables.linux.largeimages.name }}</a></li>
-  </ul>
-<p>
-  Upgrades:<br />
+<p>Holotableis a GTK 2 application, so you must have GTK 2 version 2.12.9, or better, installed. Windows users can <a href="{{ site.downloadables.windows.gtk2.url }}">download the GTK 2 installer here</a>. <em>(GTK 3 will not satisfy an application that requires GTK 2. Ensure that you install a version of GTK 2.)</em>
 </p>
+</div>
+
+<hr />
+
+<h3>Windows users:</h3>
+<div style="margin-left: 20px">
+  <p><h4>New installations:</h4></p>
   <ul>
-      <li>Use the automatic updating capabilities of Holotable to keep up to date with program versions, CDF files, and images</li>
+    <li><a href="{{ site.downloadables.windows.gtk2.url }}">Download and install GTK 2</a></li>
+    <li><a href="{{ site.downloadables.windows.holotable.url }}">Download the latest Windows installer: {{ site.downloadables.windows.holotable.name }}</a></li>
+  </ul>
+  <p><h4>Upgrades:</h4></p>
+  <ul>
+    <li>Use the automatic updating capabilities of Holotable to keep up to date with program versions, CDF files, and images</li>
   </ul>
 </div>
 
-<p style="font-weight: bold">Linux users:</p>
+<hr />
+
+<h3>Linux users:</h3>
 <div style="margin-left: 20px">
 <p>
-  <span style="font-weight: bold">Note:</span> Files downloaded for Linux may have a ".exe" extension added to the
-  end of the filename you choose when saving.  The files are all .tar.bz2 archives, so the filename may need to be 
-  modified to reflect the format correctly.<br />
-  <br />
-  New installations:<br />
+The Linux version of holotable is out of date and not currently maintained. However, holotable can still be used on Linux thanks to Wine.
 </p>
-  <ul>
-      <li>The latest full version from the Linux category: <a href="{{ site.downloadables.linux.holotable.url }}">{{ site.downloadables.linux.holotable.name }}</a></li>
-      <li>Optionally, the latest large images from the Linux category: <a href="{{ site.downloadables.linux.largeimages.url }}">{{ site.downloadables.linux.largeimages.name }}</a></li>
-  </ul>
+<h4>Install Wine</h4>
 <p>
-  Upgrades:<br />
+Install wine using apt-get or yum:
+<p><code>
+  apt-get install wine
+</code></p>
 </p>
-  <ul>
-      <li>Use the automatic updating capabilities of Holotable to keep up to date with program versions, CDF files, and images</li>
-  </ul>
+<h4>Install Holotable using Wine</h4>
+<p><code>
+  wine Holotable-0.9.10-20220618-2158.exe
+</code></p>
+<h4>Run Holotable using Wine</h4>
+<p>
+  Holotable will be installed to the virtual C: drive, which should be at ~/.wine/drive_c/Holotable. Run Holotable using the wine command:
+<p><code>
+  cd ~/.wine/drive_c/Holotable
+  wine Holotable.exe
+</code></p>
+</p>
+
 </div>
 
-<!-- <p style="text-align: center"><br />Go to <a href="/downloads/">the downloads area</a>.<br /><br /> -->
-</p>
+<hr />
 
-<p class="sectionheader">Fixed Decks</p>
+<h3>Fixed Decks</h3>
+<div style="margin-left: 20px">
 <p>Steven Schneider has put together the two-player game and Death Star II fixed decks for use with Holotable.
    Thanks a lot for making these available for everyone!<br />
    <br />
    <a href="https://res.starwarsccg.org/holotable/fixeddecks.zip">Download</a> the fixed decks (.zip file, 35KB).
 </p>
+</div>
 
-<p class="sectionheader">Demo Decks (2017)</p>
+<h3>Demo Decks (2017)</h3>
+<div style="margin-left: 20px">
 <p>The PC released two demo decks for players new (or newly returning) to the game.  Right click the links and choose "Save link as..." or something similar.<br />
    <br />
    <a href="https://res.starwarsccg.org/holotable/DS Demo Deck.htd">Dark Side</a> and <a href="https://res.starwarsccg.org/holotable/LS Demo Deck.htd">Light Side</a>.
 </p>
+</div>
 
 <hr />
 
-<p class="sectionheader">Legacy decks</p>
-
-<p class="sectionheader">Deck Pack (2011)</p>
+<h3>Legacy decks</h3>
+<div style="margin-left: 20px">
+<h4>Deck Pack (2011)</h4>
 <p>kryptofis has collected some decks to give new players (particularly returning ones) something to get more in-depth
    with and see what is out there.  These decks come from quite a few different players and have the name(s) of the 
    author in the filename.  Both Light and Dark Sides are included.
@@ -87,7 +88,7 @@ permalink: /downloads/
    <a href="https://res.starwarsccg.org/holotable/deckpack2011.zip">Download</a> the deck pack (.zip file, 30KB).
 </p>
 
-<p class="sectionheader">Deck Pack (Virtual Set 16-era)</p>
+<h4>Deck Pack (Virtual Block 16-era)</ph4>
 <p>Psychobabble has put together a deck pack for use by players trying to get into the game.  The pack 
    contains 4 decks for each side and should provide a good selection of playable (though not 
    necessarily dominant) decktypes as of Virtual Set 16.  A readme is provided; it gives a short 
@@ -96,7 +97,7 @@ permalink: /downloads/
    <a href="https://res.starwarsccg.org/holotable/deckpackv16.zip">Download</a> the deck pack (.zip file, 107KB).
 </p>
 
-<p class="sectionheader">Deck Pack (Virtual Set 11-era)</p>
+<h4>Deck Pack (Virtual Block 11-era)</h4>
 <p>Psychobabble has put together a deck pack for use by players trying to get into the game.  The pack 
    contains 4 decks for each side and should provide a good selection of playable (though not 
    necessarily dominant) decktypes as of Virtual Set 11.  A readme is provided; it gives a short 
@@ -104,21 +105,14 @@ permalink: /downloads/
    <br />
    <a href="https://res.starwarsccg.org/holotable/deckpack.zip">Download</a> the deck pack (.zip file, 80KB).
 </p>
-
+</div>
 <hr />
 
-<p class="sectionheader">Legacy Card Packs</p>
-
-<p class="sectionheader">Large Images through v17</p>
-<p><a href="https://res.starwarsccg.org/holotable/windows/holotable-large_images_through_v17.exe">Download</a> the installer (.exe file, 273M).
-</p>
-
-<p class="sectionheader">Large Images through v18</p>
-<p><a href="https://res.starwarsccg.org/holotable/windows/holotable-large_images_through_v18.exe">Download</a> the installer (.exe file, 273M).
-</p>
-
-<p class="sectionheader">Large Images Reflections IV and Revolution update</p>
-<p><a href="https://res.starwarsccg.org/holotable/windows/holotable-reflectionsiv_revolution_update.exe">Download</a> the installer (.exe file, 49M).
-</p>
-
-
+<h3>Legacy Card Packs</h3>
+<div style="margin-left: 20px">
+  <ul>
+    <li><a href="https://res.starwarsccg.org/holotable/windows/holotable-large_images_through_v17.exe">Large Images through v17</a></li>
+    <li><a href="https://res.starwarsccg.org/holotable/windows/holotable-large_images_through_v18.exe">Large Images through v18</a></li>
+    <li><a href="https://res.starwarsccg.org/holotable/windows/holotable-reflectionsiv_revolution_update.exe">Large Images Reflections IV and Revolution update</a></li>
+  </ul>
+</div>

@@ -6,7 +6,7 @@
 def indexpage(filename, permalink, subpages)
   fh = File.open("_news_indexes/"+filename+".html", "w")
   fh.write("---\n")
-  fh.write("layout: holotable\n")
+  fh.write("layout: holotable2\n")
   fh.write('title: News "'+permalink+'"'+"\n")
   fh.write("permalink: /news/"+permalink+"/\n")
   fh.write("---\n\n")
