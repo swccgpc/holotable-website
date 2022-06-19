@@ -44,8 +44,8 @@ jobs:
 
       - name: s3_website push
         run: |
-          aws --profile=swccg-production s3 sync _site/ s3://holotable.starwarsccg.org/
-          aws --profile=swccg-production cloudfront create-invalidation --distribution-id E2YAV8XKR86PXW  --paths "/" "/*"
+          aws s3 sync _site/ s3://holotable.starwarsccg.org/
+          aws cloudfront create-invalidation --distribution-id E2YAV8XKR86PXW  --paths "/" "/*"
 
 
 
