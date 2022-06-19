@@ -3,17 +3,10 @@ td,th {
   font-size: 10px;
   color: #000000;
 }
-/*
-body {
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-}
-*/
+
 .tableborder{ 
   border: 1px solid #000000;
-  background-color: #FFF; 
+  background-color: #ffffff; 
   padding: 0px; 
   margin: 10px 20px 0px;
 }
@@ -29,15 +22,6 @@ body {
   padding: 5px; 
   margin: 10px 20px 10px;
 }
-.frameheadleft{
-
-}
-.frameheadright{
-
-}
-.frameheadbg{
-
-}
 
 #logostrip{
   background-color: #ffffff;
@@ -52,7 +36,6 @@ body {
   height: 29px;
   background: white url(/images/headerbg.gif);
   color: black;
-  
 }
 
 #rightcap {
@@ -73,7 +56,7 @@ body {
 }
 
 .tablefooter {
-  background: #A0BED3;
+  background: #a0bed3;
   padding: 2px;
   height: 29px;
   border: 1px solid #000000;
@@ -84,17 +67,17 @@ body {
 }
 .tableheader {
   font-weight: bold;
-  color: #5285A2;
+  color: #5285a2;
   height: 23px;
   border: 1px solid #000000;
-  background: #A0BED3;
+  background: #a0bed3;
 }
 .mainrow {
-  background: #EAEAEA;
+  background: #eaeaea;
 }
 .subfooter {
   font-weight: bold;
-  background: #92ACBE;
+  background: #92acbe;
   height: 29px;
 }
 
@@ -151,7 +134,7 @@ body {
 input {
   font-family: Verdana, Tahoma, Arial, Sans-Serif; 
   font-size: 11px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid #cccccc;
   padding: 2px;
 }
@@ -159,14 +142,14 @@ input {
 option, select {
   font-family: Verdana, Tahoma, Arial, Sans-Serif; 
   font-size: 11px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 0px;
 }
 
 textarea {
   font-family: Verdana, Tahoma, Arial, Sans-Serif; 
   font-size: 11px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid #cccccc;
   padding: 2px;
 }
@@ -175,5 +158,5 @@ textarea {
 .red    { color:red;font-weight:bold }
 .green  { color:green;font-weight:bold }
 .blue   { color:blue;font-weight:bold }
-.orange { color:#F90;font-weight:bold }
+.orange { color:#f90;font-weight:bold }
 

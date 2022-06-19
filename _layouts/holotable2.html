@@ -5,20 +5,31 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="keywords" content="Holotable, Holodeck, Star Wars CCG online, SWCCG online, Cardtable" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style type="text/css">
     @import url("/main2.css");
     @import url("/style.css");
   </style>
+  <script>
+    function showHideLeftContent() {
+      var x = document.getElementById("leftcontent");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
 </head>
 
 <body>
 
 <div id="pageheader">
-  <a href="/"><img border="0" src="/images/swccg_holotable_bw.png" width="436" height="178" alt="Holotable" /></a>
+  <img id="hololift-navbar-icon" src="/images/hololift_navbar.svg" onerror="this.onerror=null; this.src='/images/hololift_navbar.png'" onclick="showHideLeftContent();" />
+  <a href="/"><img id="swccg-holotable-logo" border="0" src="/images/swccg_holotable_bw.png" alt="Holotable" /></a>
 </div>
 
-<div id="wrapper" style="min-height:600px">
+<div id="wrapper">
   <div id="leftcontent">
     {% include leftcontent.html %}
   </div>

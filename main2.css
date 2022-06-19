@@ -1,7 +1,21 @@
+/* needed to ensure media queried work correctly */
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+
 body {
   margin:10px 10px 10px 10px;
   padding:0px;
   background-image: url(/images/Premiere-Booster.jpg);
+}
+
+#wrapper {
+  min-height:600px
 }
 
 #leftcontent {
@@ -9,17 +23,15 @@ body {
   left:10px;
   top:190px;
   width:200px;
-  background:#fff;
-  border:1px solid #000;
+  background:#ffffff;
+  border:1px solid #000000;
 }
 
 #centercontent {
-  background:#fff;
+  background:#ffffff;
   margin-left: 200px;
   margin-right:200px;
-  border:1px solid #000;
-  voice-family: "\"}\"";
-  voice-family: inherit;
+  border:1px solid #000000;
   margin-left: 201px;
   margin-right: 201px;
 }
@@ -28,25 +40,28 @@ html>body #centercontent {
   margin-right: 201px;
 }
 
+
+
 #rightcontent {
   position: absolute;
   /* This really should be 10, but IE 6 PC messes it up */
   right:9px;
   top:190px;
   width:200px;
-  background:#fff;
-  border:1px solid #000;
+  background:#ffffff;
+  border:1px solid #000000;
 }
 /* IE 6 doesn't see this */
 html>body #rightcontent {
   right: 10px;
 }
-  
+ 
 #bottomcontent {
-  background:#fff;
-  border:1px solid #000;
+  background:#ffffff;
+  border:1px solid #000000;
   margin-left: 201px;
   margin-right: 201px;
+  text-align: center;
 }
 
 #pageheader {
@@ -54,11 +69,8 @@ html>body #rightcontent {
   text-align: center;
   vertical-align:bottom;
   height:180px;
-  width:458px;
   margin-left: auto;
   margin-right: auto;
-  voice-family: "\"}\"";
-  voice-family: inherit;
 }
 
 p,h1,pre {
@@ -155,3 +167,33 @@ code {
   color:#000000;
   padding:5px;
 }
+
+img#hololift-navbar-icon {
+  width:50px;
+  height:50px;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:999;
+}
+
+@media screen and (min-width: 470px) {
+  #rightcontent,#leftcontent { display:block; }
+  img#swccg-holotable-logo {
+    width:436px;
+    height:178px;
+  }
+  img#hololift-navbar-icon { display:none; }
+  #pageheader { width:458px; }
+}
+
+@media screen and (max-width: 470px) {
+  #rightcontent,#leftcontent { display:none; }
+  #bottomcontent,#centercontent,#wrapper { margin: 0px !important; width:100% !important; }
+  body { padding:0px; margin:0px; }
+  img#swccg-holotable-logo { width:100%; }
+  #pageheader { width:100%; }
+}
+
+
+
