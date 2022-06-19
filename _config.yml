@@ -36,7 +36,7 @@ downloadables:
     #  description: "Holotable 0.9.9 contains changes for the virtual card reset of 2014.<br /><br />Holodeck 0.3.9 is a bug fix release that prevents a crash when adding a new card to a deck while it is sorted by card name."
     holotable:
       # https://github.com/swccgpc/holotable_exe/releases
-      url: "https://github.com/swccgpc/holotable_exe/releases/download/20220616-2117/Holotable-0.9.10-20220617-0118.exe"
+      url: "https://github.com/swccgpc/holotable_exe/releases/download/20220619-1842/Holotable-0.9.10-20220619-2243.exe"
       name: "Holotable 0.9.10"
       description: "Contains Holotable 0.9.10, Holodeck 0.3.9, and the latest v18 release."
     largeimages:
