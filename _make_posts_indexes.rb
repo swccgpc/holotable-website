@@ -43,6 +43,10 @@ end
 
 puts alldates
 
+if not File.directory?("_news_indexes") then
+  Dir.mkdir("_news_indexes")
+end
+
 alldates.each do |y, m|
 
   puts y + " (y)"
