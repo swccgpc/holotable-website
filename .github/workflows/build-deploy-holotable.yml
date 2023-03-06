@@ -18,7 +18,7 @@ jobs:
       - run: "sleep 5"
 
       - name: Set up Ruby 3.0
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@main
         with:
           ruby-version: 3.0
 
@@ -33,7 +33,7 @@ jobs:
           bundle exec jekyll build
 
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@main
         with:
           role-to-assume: "arn:aws:iam::230787692442:role/githuboidc-holotable-website"
           role-session-name: "holotableWebsiteWorkflow"
